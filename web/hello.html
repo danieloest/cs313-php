@@ -5,6 +5,38 @@
 </head>
 <body>
    <h1>Hello World!</h1>
+   <label for="name">Who are you?</label>
+   <input id="name" type="text">
+   <button id="sname">That's me!</button>
+   <div id="d_greeting" style="visibility: hidden">
+      <p id="greeting">Hi, </p>
+      <label for="color">Would you like to change the background color?</label>
+      <input type="text" id="color" placeholder="The color is...">
+      <button id="ccolor">Change</button>
+   </div>
 
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script>
+      //Button for name
+      $("#sname").click(function() {
+         // Get the name
+         var message = $("#name").val();
+         message += "! Nice to meet you.";
+
+         // Add the name to #greeting
+         $("#greeting").append(message);
+
+         // Make #greeting visible
+         $("#d_greeting").css("visibility", "visible");
+      })
+
+      // Button to change color
+      $("#ccolor").click(function(){
+         // Get the color
+         var color = $("#color").val();
+         // Change the page's background color
+         $("html").css("background-color", color);
+      })
+   </script>
 </body>
 </html>
