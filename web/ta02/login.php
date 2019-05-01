@@ -14,8 +14,17 @@ session_start();
   
   <?php include 'header.php';
   ?>
-  <button>Login as Administrator</button>
-   <button>Login as tester</button>
+  <button onclick="loginAdmin()">Login as Administrator</button>
+  <button onclick="loginTester()">Login as tester</button>
+
+  <?php
+  function loginAdmin() {
+    echo "<br><h2>Test. Logged in as admin<h2>";
+  }
+  function loginTester() {
+    echo "<br><h2>Test. Logged in as Tester<h2>";
+  }
+  ?>
   
 </body>
 </html>
