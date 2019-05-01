@@ -12,9 +12,9 @@ session_start();
 </head>
 <body>
   
-  
-  <?php include 'header.php';
   <h1>WELCOM to SUPER GLASSES!</h1>
+  <?php include 'header.php';
+  
   $_SESSION["userType"] = $userType;
   echo "<h3>User type is: $userType";
   // $isLoggedIn = false;
