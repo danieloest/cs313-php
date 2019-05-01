@@ -20,9 +20,7 @@ session_start();
     echo "<h3>Welcome, $userType!<br><br>";
   }
   else {
-    echo "Welcome! You are not logged in.";
-    echo "Var dump: ";
-    var_dump($userType);
+    echo "<h3>Welcome! You are not logged in.</h3>";
   }
   
   ?>
