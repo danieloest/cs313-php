@@ -10,8 +10,8 @@
   
   <?php include 'header.php';
   ?>
-  <button>Login as Administrator</button>;
-   <button>Login as tester</button>;
+  <button>Login as Administrator</button>
+   <button>Login as tester</button>
   
 </body>
 </html>
