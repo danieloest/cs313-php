@@ -16,7 +16,7 @@ session_start();
   <?php include 'header.php';
   
   $userType = $_SESSION["userType"];
-  if (isset($userType)) {
+  if ($userType != null) {
     echo "<h3>Welcome, $userType!<br><br>";
   }
   else {
