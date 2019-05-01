@@ -14,11 +14,13 @@ session_start();
   
   
   <?php include 'header.php';
-  echo "<h1>WELCOM to SUPER GLASSES!</h1>";
-  $isLoggedIn = false;
-  if(!$isLoggedIn) {
-    echo "<h2>Welcome! You are not logged in.</h2>";
-  }
+  <h1>WELCOM to SUPER GLASSES!</h1>
+  $_SESSION["userType"] = $userType;
+  echo "<h3>User type is: $userType";
+  // $isLoggedIn = false;
+  // if(!$isLoggedIn) {
+  //   echo "<h2>Welcome! You are not logged in.</h2>";
+  // }
   ?>
 
   <a href="login.php?userType=admin"><button id="loginAdmin">Login as Administrator</button></a>
