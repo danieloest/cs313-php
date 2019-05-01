@@ -10,10 +10,10 @@
   
   
   <?php include 'header.php';
-  echo "WELCOM to SUPER GLASSES!";
+  echo "<h1>WELCOM to SUPER GLASSES!</h1>";
   $isLoggedIn = false;
   if(!$isLoggedIn) {
-    echo "Welcome! You are not logged in...";
+    echo "<h2>Welcome! You are not logged in.</h2>";
   }
   ?>
   

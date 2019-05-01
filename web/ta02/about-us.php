@@ -9,7 +9,7 @@
 <body>
   <?php include 'header.php';
   ?>
-  <h1>About us<h1><br/>;
+  <h1>About us<h1><br/>
   
   <h1>We sell the best glasses in the WORLD!</h1>
 
