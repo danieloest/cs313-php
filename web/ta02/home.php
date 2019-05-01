@@ -20,6 +20,9 @@ session_start();
     echo "<h2>Welcome! You are not logged in.</h2>";
   }
   ?>
+
+  <a href="login.php?userType=admin"><button id="loginAdmin">Login as Administrator</button></a>
+  <a href="login.php?userType=tester"><button id="loginTester">Login as tester</button></a>
   
 </body>
 </html>
