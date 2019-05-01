@@ -1,5 +1,11 @@
 <?php
 session_start();
-$_SESSION["userType"] = $_GET['userType'];
+$userType = $_GET['userType'];
+if ($userType != "logout") {
+  $_SESSION["userType"] = $userType;
+}
+else {
+  unset($_SESSION["userType"]);
+}
 header("Location: home.php");
 ?>

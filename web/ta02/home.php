@@ -27,7 +27,12 @@ session_start();
 
   <a href="login.php?userType=admin"><button id="loginAdmin">Login as Administrator</button></a>
   <a href="login.php?userType=tester"><button id="loginTester">Login as tester</button></a>
-  <a href="login.php?userType=null"><button id="logout">Logout</button></a>
+  <!-- <a href="login.php?userType=null"><button id="logout">Logout</button></a> -->
+  <?php
+  if ($userType != null){
+    echo "<a href=\"login.php?userType=null\"><button id=\"logout\">Logout</button></a>";
+  }
+  ?>
   
 </body>
 </html>
