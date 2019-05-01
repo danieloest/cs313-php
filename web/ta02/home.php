@@ -19,6 +19,11 @@ session_start();
   if (isset($userType)) {
     echo "<h3>Welcome, $userType!<br><br>";
   }
+  else {
+    echo "Welcome! You are not logged in.";
+    echo "Var dump: ";
+    var_dump($userType);
+  }
   
   ?>
 
