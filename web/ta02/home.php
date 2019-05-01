@@ -30,7 +30,7 @@ session_start();
   <!-- <a href="login.php?userType=null"><button id="logout">Logout</button></a> -->
   <?php
   if ($userType != null){
-    echo "<a href=\"login.php?userType=null\"><button id=\"logout\">Logout</button></a>";
+    echo "<a href=\"login.php?userType=logout\"><button id=\"logout\">Logout</button></a>";
   }
   ?>
   
