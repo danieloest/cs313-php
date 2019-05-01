@@ -15,8 +15,8 @@ session_start();
   <h1>WELCOM to SUPER GLASSES!</h1>
   <?php include 'header.php';
   
-  // $_SESSION["userType"] = $userType;
-  echo "<h3>User type is: " . $_SESSION["userType"]  . "<br>";
+  $_SESSION["userType"] = $userType;
+  echo "<h3>User type is: $userType";
   // $isLoggedIn = false;
   // if(!$isLoggedIn) {
   //   echo "<h2>Welcome! You are not logged in.</h2>";
