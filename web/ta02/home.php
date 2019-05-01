@@ -16,11 +16,13 @@ session_start();
   <?php include 'header.php';
   
   $userType = $_SESSION["userType"];
-  echo "<h3>User type is: $userType";
-  // $isLoggedIn = false;
-  // if(!$isLoggedIn) {
-  //   echo "<h2>Welcome! You are not logged in.</h2>";
-  // }
+  if (isset($userType)) {
+    echo "<h3>Welcome, $userType!<br><br>";
+  }
+  else {
+    echo "Welcome! You are not logged in.<br><br>"
+  }
+  
   ?>
 
   <a href="login.php?userType=admin"><button id="loginAdmin">Login as Administrator</button></a>
