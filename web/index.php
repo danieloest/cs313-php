@@ -15,20 +15,20 @@
   ?>
   <div class="container">
     <ul class="list-group">
-      <li><a href="hello.html">Assignment 01</a></li>
-      <li><a href="assign02.php">Assignment 02</a></li>
-      <li><a href="assign03.php">Assignment 03</a></li>
-      <li><a href="assign04.php">Assignment 04</a></li>
-      <li><a href="assign05.php">Assignment 05</a></li>
-      <li><a href="assign06.php">Assignment 06</a></li>
-      <li><a href="assign07.php">Assignment 07</a></li>
-      <li><a href="assign08.php">Assignment 08</a></li>
-      <li><a href="assign09.php">Assignment 09</a></li>
-      <li><a href="assign10.php">Assignment 10</a></li>
-      <li><a href="assign11.php">Assignment 11</a></li>
-      <li><a href="assign12.php">Assignment 12</a></li>
-      <li><a href="assign13.php">Assignment 13</a></li>
-      <li><a href="assign14.php">Assignment 14</a></li>
+      <a class="list-group-item" href="hello.html">Assignment 01</a>
+      <a class="list-group-item" href="assign02.php">Assignment 02</a>
+      <a class="list-group-item" href="assign03.php">Assignment 03</a>
+      <a class="list-group-item" href="assign04.php">Assignment 04</a>
+      <a class="list-group-item" href="assign05.php">Assignment 05</a>
+      <a class="list-group-item" href="assign06.php">Assignment 06</a>
+      <a class="list-group-item" href="assign07.php">Assignment 07</a>
+      <a class="list-group-item" href="assign08.php">Assignment 08</a>
+      <a class="list-group-item" href="assign09.php">Assignment 09</a>
+      <a class="list-group-item" href="assign10.php">Assignment 10</a>
+      <a class="list-group-item" href="assign11.php">Assignment 11</a>
+      <a class="list-group-item" href="assign12.php">Assignment 12</a>
+      <a class="list-group-item" href="assign13.php">Assignment 13</a>
+      <a class="list-group-item" href="assign14.php">Assignment 14</a>
     </ul>
   </div>
 </body>
