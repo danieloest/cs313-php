@@ -7,7 +7,7 @@
   <!-- Add Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="homePage.css">
-  <title>Document</title>
+  <title>Daniel Oestreicher's Home Page</title>
 </head>
 <body>
   <?php
