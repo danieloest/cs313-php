@@ -13,5 +13,6 @@
     <?php
     include 'header.php'
     ?>
+    <p class="bio">I am a senior majoring in Software Engineering. Besides programming, I love to listen to music. My favorite artists are Hippo Campus and Wallows.</p>
 </body>
 </html>
