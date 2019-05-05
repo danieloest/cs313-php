@@ -32,7 +32,7 @@
     <div class="item active">
       <img class="album" src="https://f4.bcbits.com/img/a3135933789_10.jpg" alt="Landmark by Hippo Campus">
       <div class="carousel-caption">
-        <<h4>Landmark</h4>
+        <h4>Landmark</h4>
         <h5>Hippo Campus</h5>
       </div>
     </div>
