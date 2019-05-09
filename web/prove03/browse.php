@@ -13,6 +13,9 @@ session_start();
 <body>
     <div class="jumbotron text-center">
         <h1>Welcome to ZMart!</h1>
+        <div class="viewCart">
+            <h5 class="glyphicon glyphicon-shopping-cart">View Cart</h5>
+        </div>
     </div>
 </body>
 </html>
