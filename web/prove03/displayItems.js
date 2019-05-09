@@ -51,10 +51,13 @@ function createProduct(product) {
     return item;
 
 }
+console.log("In display.js");
 
 function displayItems () {
+    console.log("In display function");
     const container = document.getElementById("itemDisplay");
     products.forEach(product => {
+        console.log("In for each loop");
         container.appendChild(createProduct(product));
     });
 }
