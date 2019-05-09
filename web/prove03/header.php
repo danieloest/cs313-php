@@ -8,7 +8,7 @@
         <ul class="nav nav-pills nav-justified">
             <li id="home" class="<?= ($activePage == 'browse') ? 'active':''; ?>">
                 <a href=" browse.php">
-                    <h4>H ome</h4>
+                    <h4>Home</h4>
                 </a> 
             </li> 
             <li id="cart" class="<?= ($activePage == 'cart') ? 'active':''; ?>">
