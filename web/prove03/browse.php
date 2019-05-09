@@ -13,5 +13,8 @@ session_start();
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <div id="itemDisplay">
+        <script src="displayItems.js"></script>
+    </div>
 </body>
 </html>
