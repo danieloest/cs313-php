@@ -7,18 +7,11 @@
                     <h4>Home</h4>
                 </a>
             </li>
-            <a href="cart.php">
-                <h4>View Cart <span class="glyphicon glyphicon-shopping-cart"></span></h4>
-            </a>
-
+            <li>
+                <a href="cart.php">
+                    <h4>View Cart <span class="glyphicon glyphicon-shopping-cart"></span></h4>
+                </a>
+            </li>
         </ul>
-        <!-- <div class="sections">
-            <a class="nav-link" href="browse.php">Home</a>
-        </div>
-        <div class="viewCart text-right">
-            <a href="cart.php">
-                <h4>View Cart <span class="glyphicon glyphicon-shopping-cart"></span></h4>
-            </a> -->
-        </div>
     </div>
 </div>
