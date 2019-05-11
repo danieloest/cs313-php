@@ -30,7 +30,7 @@ session_start();?>
     // If we have stuff in our cart
     else {
         
-        echo "<table>
+        echo "<table class=\"table\">
         <tr>
         <th>Item</th>
         <th>Quantity</th>
