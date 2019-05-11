@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div id="itemDisplay" class="flex">
+    <div id="itemDisplay" class="flex-container">
         <script>displayItems();</script>
     </div>
 </body>
