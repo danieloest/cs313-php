@@ -50,7 +50,9 @@ function createProduct(product) {
     item.innerHTML = `<img src="${product.imgSrc}" alt="${product.imgAlt}"><br>
     <p class="productName">${product.name}</p>
     <input class="inputNum" type="number" value=1 id="${product.id}Quantity">
-    <button onclick="addToCart(${product.id}Quantity.value, '${product.name}')">Add to Cart</button>`;
+    <a href="browse.php?animal=${product.name}&quantity=">
+    <button onclick="addToCart(${product.id}Quantity.value, '${product.name}')">Add to Cart</button>
+    </a>`;
     return item;
 
 }
@@ -66,4 +68,6 @@ function displayItems() {
 
 function addToCart(quantity, name) {
     alert("You are ordering " + quantity + name);
+    let url = "browse.php?animal=" + name + "&quantity=" + quantity;
+    window.location=url;
 }
