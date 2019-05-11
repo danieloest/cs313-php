@@ -3,9 +3,12 @@
 // Add item to session
 $animal = $_GET['animal'];
 $quantity = $_GET['quantity'];
-var_dump($animal);
-var_dump($quantity);
-$_SESSION[$animal] = $quantity;
+if (!is_null($animal) && !is_null($quantity)) {
+    var_dump($animal);
+    var_dump($quantity);
+    
+    $_SESSION[$animal] = $quantity;
+}
 
 ?>
 <!DOCTYPE html>
