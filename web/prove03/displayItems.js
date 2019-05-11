@@ -49,6 +49,11 @@ function createProduct(product) {
     item.id = product.id;
     item.innerHTML = `<img src="${product.imgSrc}" alt="${product.imgAlt}">
     <button>Add to Cart</button>`;
+    // Add text overlay
+    const overlay = document.createElement('div');
+    overlay.class = "overlay";
+    overlay.innerHTML = `${product.name}`;
+    item.appendChild(overlay);
     return item;
 
 }
