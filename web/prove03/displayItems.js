@@ -50,7 +50,7 @@ function createProduct(product) {
     item.innerHTML = `<img src="${product.imgSrc}" alt="${product.imgAlt}"><br>
     <p class="productName">${product.name}</p>
     <input class="inputNum" type="number" value=1 id="${product.id}Quantity">
-    <button>Add to Cart</button>`;
+    <button onclick="addToCart(${product.id}Quantity.value)">Add to Cart</button>`;
     return item;
 
 }
@@ -64,6 +64,6 @@ function displayItems() {
     });
 }
 
-
-console.log("In display.js");
-
+function addToCart(quantity) {
+    alert("You are ordering " + quantity);
+}
