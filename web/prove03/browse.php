@@ -9,12 +9,12 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="zmart.css">
+    <script src="displayItems.js" defer></script>
     <title>ZMart</title>
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div id="itemDisplay">
-        <script src="displayItems.js"></script>
+    <div id="itemDisplay" onload="displayItems()">
     </div>
 </body>
 </html>
