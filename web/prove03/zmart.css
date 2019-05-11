@@ -10,4 +10,8 @@ img {
 .flex-container {
     display: flex;
 }
+
+.inputNum {
+    width: 2.5em;
+}
   
