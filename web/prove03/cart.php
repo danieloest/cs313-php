@@ -12,8 +12,21 @@
 <body>
     <?php include 'header.php';?>
     <?php //var_dump($_SESSION); 
+    // If there is nothing in the cart
     if (empty($_SESSION)) {
         echo "<h2>You have not added anything to your cart.";
+    }
+    // If we have stuff in our cart
+    else {
+        echo "<table>
+        <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        </tr>";
+        for ($i = 0; i < count($_SESSION) - 1; $i++) {
+            echo '<tr><td>' . $_SESSION[$i].key . '</td><td>' . $_SESSION[$i].value . '</td></tr>';
+        }
+        echo "</table>";
     }
     ?>
 </body>
