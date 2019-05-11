@@ -4,8 +4,8 @@
 $animal = $_GET['animal'];
 $quantity = $_GET['quantity'];
 if (!is_null($animal) && !is_null($quantity)) {
-    var_dump($animal);
-    var_dump($quantity);
+    // var_dump($animal);
+    // var_dump($quantity);
     
     $_SESSION[$animal] = $quantity;
 }

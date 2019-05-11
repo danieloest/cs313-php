@@ -11,6 +11,10 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <?php var_dump($_SESSION); ?>
+    <?php //var_dump($_SESSION); 
+    if (empty($_SESSION)) {
+        echo "<h2>You have not added anything to your cart.";
+    }
+    ?>
 </body>
 </html>
