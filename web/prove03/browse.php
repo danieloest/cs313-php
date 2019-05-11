@@ -10,7 +10,7 @@ if (!is_null($animal) && !is_null($quantity) && !is_null($cost)) {
     // var_dump($quantity);
     // var_dump($cost);
     class Product {
-        function Product() {
+        function Product($cost, $quantity, $animal) {
             $this->price = $cost * $quantity;
             $this->name = $animal;
             $this->quantity = $quantity;
@@ -18,7 +18,7 @@ if (!is_null($animal) && !is_null($quantity) && !is_null($cost)) {
         }
     }
     
-    $product = new Product();
+    $product = new Product($cost, $quantity, $animal);
 
     echo "Product: " . $product->name . "<br>Quantity: " . $product->quantity . "<br>Price: " . $produce->price;
 
