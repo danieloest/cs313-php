@@ -11,5 +11,6 @@
 </head>
 <body>
     <?php include 'header.php';?>
+    <?php var_dump($_SESSION); ?>
 </body>
 </html>
