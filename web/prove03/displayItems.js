@@ -43,15 +43,6 @@ const products = [
     }
 ];
 
-function displayItems() {
-    console.log("In displayItems()");
-    const container = document.getElementById("itemDisplay");
-    products.forEach(product => {
-        console.log("In for each loop");
-        container.appendChild(createProduct(product));
-    });
-}
-
 function createProduct(product) {
     console.log("in createProduct()")
     const item = document.createElement('div');
@@ -61,5 +52,16 @@ function createProduct(product) {
     return item;
 
 }
+
+function displayItems() {
+    console.log("In displayItems()");
+    const container = document.getElementById("itemDisplay");
+    products.forEach(product => {
+        console.log("In for each loop");
+        container.appendChild(createProduct(product));
+    });
+}
+
+
 console.log("In display.js");
 
