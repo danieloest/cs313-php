@@ -30,7 +30,7 @@
         //     echo "<tr><td>" . $product->name . "</td><td>" . $product->quantity . "</td><td>" . $product->price . "</td></tr>";
         // }
         foreach($_SESSION AS $key => $value) {
-            echo "$key -> $value";
+            echo "Item: $key -> $value <br>";  
           }
         echo "</table>";
     }
