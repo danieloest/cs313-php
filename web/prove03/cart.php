@@ -35,7 +35,7 @@
         //     echo "Item: $key -> $value <br>";  
         //   }
         for ($i = 0; i <= count($_SESSION); $i++) {
-            echo $_SESSION[$i] . "<br>";
+            var_dump($_SESSION[$i]);
         }
     }
     ?>
