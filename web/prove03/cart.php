@@ -10,7 +10,25 @@
     session_start();
     $remove = $_GET['remove'];
     if (isset($remove)) {
-        echo "You are removing: " . $remove;
+        // echo "You are removing: " . $remove;
+        if ($remove == "PP") {
+            unset($_SESSION["Peppy Puppy"]);
+        }
+        if ($remove == "KK") {
+            unset($_SESSION["Krazy Kitty"]);
+        }
+        if ($remove == "GGoat") {
+            unset($_SESSION["Goat Galore"]);
+        }
+        if ($remove == "CC") {
+            unset($_SESSION["Crazy Cow"]);
+        }
+        if ($remove == "BB") {
+            unset($_SESSION["Blazing Birds"]);
+        }
+        if ($remove == "GGecko") {
+            unset($_SESSION["Geeky Gecko"]);
+        }
     }
     
     ?>
@@ -51,7 +69,7 @@
             $totalCost += $_SESSION["Krazy Kitty"]->price;
         }
         if(isset($_SESSION["Goat Galore"])) {
-            echo "<tr><td>" . $_SESSION["Goat Galore"]->name . "</td><td>" . $_SESSION["Goat Galore"]->quantity . "</td><td><a href=\"cart.php?remove=GG\">❌</a></td><td>$" . $_SESSION["Goat Galore"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Goat Galore"]->name . "</td><td>" . $_SESSION["Goat Galore"]->quantity . "</td><td><a href=\"cart.php?remove=GGoat\">❌</a></td><td>$" . $_SESSION["Goat Galore"]->price . "</td></tr>";
             $totalCost += $_SESSION["Goat Galore"]->price;
         }
         if(isset($_SESSION["Crazy Cow"])) {
@@ -63,7 +81,7 @@
             $totalCost += $_SESSION["Blazing Birds"]->price;
         }
         if(isset($_SESSION["Geeky Gecko"])) {
-            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td><a href=\"cart.php?remove=GG\">❌</a></td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td><a href=\"cart.php?remove=GGecko\">❌</a></td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
         echo "<tr><td></td><td></td><td></td><td>$" . $totalCost . "</td></tr>";
