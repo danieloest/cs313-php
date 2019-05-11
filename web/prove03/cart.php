@@ -29,10 +29,11 @@
         // foreach ($product as $_SESSION) {
         //     echo "<tr><td>" . $product->name . "</td><td>" . $product->quantity . "</td><td>" . $product->price . "</td></tr>";
         // }
+
+        echo "</table>";
         foreach($_SESSION AS $key => $value) {
             echo "Item: $key -> $value <br>";  
           }
-        echo "</table>";
     }
     ?>
 </body>
