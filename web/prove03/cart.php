@@ -44,9 +44,11 @@ session_start();?>
         // foreach($_SESSION AS $key => $value) {
         //     echo "Item: $key -> $value <br>";  
         //   }
-        for ($i = 0; i <= count($_SESSION); $i++) {
-            var_dump($_SESSION[$i]);
-        }
+        echo "Size of Session: " . count($_SESSION) . "<br>";
+        var_dump($_SESSION["Peppy Puppy"]);
+        // for ($i = 0; i <= count($_SESSION); $i++) {
+        //     var_dump($_SESSION[$i]);
+        // }
     }
     ?>
 </body>
