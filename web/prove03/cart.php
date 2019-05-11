@@ -36,19 +36,28 @@ session_start();?>
         <th>Quantity</th>
         <th>Price</th>
         </tr>";
-        // foreach ($product as $_SESSION) {
-        //     echo "<tr><td>" . $product->name . "</td><td>" . $product->quantity . "</td><td>" . $product->price . "</td></tr>";
-        // }
-
-        echo "</table>";
-        // foreach($_SESSION AS $key => $value) {
-        //     echo "Item: $key -> $value <br>";  
-        //   }
-        echo "Size of Session: " . count($_SESSION) . "<br>";
         if(isset($_SESSION["Peppy Puppy"])) {
-            // var_dump($_SESSION["Peppy Puppy"]);
             echo "<tr><td>" . $_SESSION["Peppy Puppy"]->name . "</td><td>" . $_SESSION["Peppy Puppy"]->quantity . "</td><td>" . $_SESSION["Peppy Puppy"]->price . "</td></tr>";
         }
+        if(isset($_SESSION["Krazy Kitty"])) {
+            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td>" . $_SESSION["Krazy Kitty"]->quantity . "</td><td>" . $_SESSION["Krazy Kitty"]->price . "</td></tr>";
+        }
+        if(isset($_SESSION["Goat Galore"])) {
+            echo "<tr><td>" . $_SESSION["Goat Galore"]->name . "</td><td>" . $_SESSION["Goat Galore"]->quantity . "</td><td>" . $_SESSION["Goat Galore"]->price . "</td></tr>";
+        }
+        if(isset($_SESSION["Crazy Cow"])) {
+            echo "<tr><td>" . $_SESSION["Crazy Cow"]->name . "</td><td>" . $_SESSION["Crazy Cow"]->quantity . "</td><td>" . $_SESSION["Crazy Cow"]->price . "</td></tr>";
+        }
+        if(isset($_SESSION["Blazing Birds"])) {
+            echo "<tr><td>" . $_SESSION["Blazing Birds"]->name . "</td><td>" . $_SESSION["Blazing Birds"]->quantity . "</td><td>" . $_SESSION["Blazing Birds"]->price . "</td></tr>";
+        }
+        if(isset($_SESSION["Geeky Gecko"])) {
+            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td>" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
+        }
+
+
+        echo "</table>";
+
     }
     ?>
 </body>
