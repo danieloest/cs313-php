@@ -45,10 +45,9 @@ session_start();?>
         //     echo "Item: $key -> $value <br>";  
         //   }
         echo "Size of Session: " . count($_SESSION) . "<br>";
-        var_dump($_SESSION["Peppy Puppy"]);
-        // for ($i = 0; i <= count($_SESSION); $i++) {
-        //     var_dump($_SESSION[$i]);
-        // }
+        if(isset($_SESSION["Peppy Puppy"])) {
+            var_dump($_SESSION["Peppy Puppy"]);
+        }
     }
     ?>
 </body>
