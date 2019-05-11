@@ -22,6 +22,7 @@ if (!is_null($animal) && !is_null($quantity) && !is_null($cost)) {
     echo "Product: " . $product->name . "<br>Quantity: " . $product->quantity . "<br>Price: " . $product->price;
 
     $_SESSION.array_push($product);
+    var_dump($_SESSION);
 }
 
 ?>
