@@ -11,14 +11,16 @@ if (!is_null($animal) && !is_null($quantity) && !is_null($cost)) {
     // var_dump($cost);
     class Product {
         function Product() {
-            $this->price = $cost;
-            $this->animal = $animal;
+            $this->price = $cost * $quantity;
+            $this->name = $animal;
             $this->quantity = $quantity;
 
         }
     }
     
     $product = new Product();
+
+    echo "Product: " . $product->name . "<br>Quantity: " . $product->quantity . "<br>Price: " . $produce->price;
 
     $_SESSION.array_push($product);
 }
