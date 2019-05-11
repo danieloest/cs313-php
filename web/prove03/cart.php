@@ -11,13 +11,14 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <?php //var_dump($_SESSION); 
+    <?php  
     // If there is nothing in the cart
     if (empty($_SESSION)) {
         echo "<h2>You have not added anything to your cart.";
     }
     // If we have stuff in our cart
     else {
+        var_dump($_SESSION);
         echo "<table>
         <tr>
         <th>Item</th>
