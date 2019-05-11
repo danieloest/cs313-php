@@ -24,9 +24,10 @@
         <tr>
         <th>Item</th>
         <th>Quantity</th>
+        <th>Price</th>
         </tr>";
-        for ($i = 0; i < count($_SESSION) - 1; $i++) {
-            echo '<tr><td>' . $_SESSION[$i].key . '</td><td>' . $_SESSION[$i].value . '</td></tr>';
+        foreach ($product as $_SESSION) {
+            echo "<tr><td>" . $product->name . "</td><td>" . $product->quantity . "</td><td>" . $product->price . "</td></tr>";
         }
         echo "</table>";
     }
