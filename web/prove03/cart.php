@@ -7,8 +7,13 @@
 
         }
     }
-
-session_start();?>
+    session_start();
+    $remove = $_GET['remove'];
+    if (isset($remove)) {
+        echo "You are removing: " . $remove;
+    }
+    
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,8 +55,7 @@ session_start();?>
             $totalCost += $_SESSION["Goat Galore"]->price;
         }
         if(isset($_SESSION["Crazy Cow"])) {
-            echo "<tr><td>" . $_SESSION["Crazy Cow"]->name . "</td><td>" . $_SESSION["Crazy Cow"]->quantity . "</td><td>$" . $_SESSION["Crazy Cow"]->price . "</td>
-            <td><a href=\"cart.php?remove=CC\">❌</a></td></tr>";
+            echo "<tr><td>" . $_SESSION["Crazy Cow"]->name . "</td><td>" . $_SESSION["Crazy Cow"]->quantity . "</td> <td><a href=\"cart.php?remove=CC\">❌</a></td><td>$" . $_SESSION["Crazy Cow"]->price . "</td></tr>";
             $totalCost += $_SESSION["Crazy Cow"]->price;
         }
         if(isset($_SESSION["Blazing Birds"])) {
@@ -62,7 +66,7 @@ session_start();?>
             echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td><a href=\"cart.php?remove=GG\">❌</a></td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
-        echo "<tr><td></td><td></td><td>$" . $totalCost . "</td></tr>";
+        echo "<tr><td></td><td></td><td></td><td>$" . $totalCost . "</td></tr>";
         echo "</table>";
 
     }
