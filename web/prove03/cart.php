@@ -31,9 +31,12 @@
         // }
 
         echo "</table>";
-        foreach($_SESSION AS $key => $value) {
-            echo "Item: $key -> $value <br>";  
-          }
+        // foreach($_SESSION AS $key => $value) {
+        //     echo "Item: $key -> $value <br>";  
+        //   }
+        for ($i = 0; i <= count($_SESSION); $i++) {
+            echo $_SESSION[$i] . "<br>";
+        }
     }
     ?>
 </body>
