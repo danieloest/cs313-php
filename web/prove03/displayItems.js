@@ -47,12 +47,10 @@ function createProduct(product) {
     console.log("in createProduct()")
     const item = document.createElement('div');
     item.id = product.id;
-    item.innerHTML = `<img src="${product.imgSrc}" alt="${product.imgAlt} class="img-responsive">
+    item.innerHTML = `<img src="${product.imgSrc}" alt="${product.imgAlt}>
+    <div>${porudct.name}</div>
+    <input type="number" value=1>
     <button>Add to Cart</button>`;
-    // Add name
-    const overlay = document.createElement('div');
-    overlay.innerHTML = `${product.name}`;
-    item.appendChild(overlay);
     return item;
 
 }
