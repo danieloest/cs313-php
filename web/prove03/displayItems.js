@@ -48,7 +48,7 @@ function createProduct(product) {
     const item = document.createElement('div');
     item.id = product.id;
     item.innerHTML = `<img src="${product.imgSrc}" alt="${product.imgAlt}/><br>
-    <p class="productName>${product.name}</p>
+    <p class="productName">${product.name}</p>
     <input class="inputNum" type="number" value=1 id="${product.id}Quantity">
     <button>Add to Cart</button>`;
     return item;
