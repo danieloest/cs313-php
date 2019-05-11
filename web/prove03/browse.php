@@ -5,6 +5,7 @@ $animal = $_GET['animal'];
 $quantity = $_GET['quantity'];
 $cost = $_GET['cost'];
 if (!is_null($animal) && !is_null($quantity) && !is_null($cost)) {
+    echo "In if";
     // var_dump($animal);
     // var_dump($quantity);
     // var_dump($cost);
