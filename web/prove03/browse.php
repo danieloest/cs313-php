@@ -14,7 +14,8 @@ session_start();
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div id="itemDisplay" onload="displayItems()">
+    <div id="itemDisplay">
+        <script>displayItems();</script>
     </div>
 </body>
 </html>
