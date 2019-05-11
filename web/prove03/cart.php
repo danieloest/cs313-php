@@ -45,7 +45,7 @@ session_start();?>
         //     echo "Item: $key -> $value <br>";  
         //   }
         for ($i = 0; i <= count($_SESSION); $i++) {
-            var_dump($_SESSION[$i]);
+            echo $_SESSION[$i]->product->name;
         }
     }
     ?>
