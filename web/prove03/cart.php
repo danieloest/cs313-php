@@ -46,7 +46,8 @@ session_start();?>
         //   }
         echo "Size of Session: " . count($_SESSION) . "<br>";
         if(isset($_SESSION["Peppy Puppy"])) {
-            var_dump($_SESSION["Peppy Puppy"]);
+            // var_dump($_SESSION["Peppy Puppy"]);
+            echo "<tr><td>" . $_SESSION["Peppy Puppy"]->name . "</td><td>" . $_SESSION["Peppy Puppy"]->quantity . "</td><td>" . $_SESSION["Peppy Puppy"]->price . "</td></tr>";
         }
     }
     ?>
