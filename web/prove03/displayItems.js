@@ -14,11 +14,11 @@ const products = [
         id: "kitty"
     },
     {
-        name = "Goat Galore",
-        price = 75,
-        imgSrc = "https://timedotcom.files.wordpress.com/2018/05/american-airlines-says-no-emotional-support-goats.jpg",
-        imgAlt = "Goat sticking its tongue out",
-        id = "goat"
+        name: "Goat Galore",
+        price: 75,
+        imgSrc: "https://timedotcom.files.wordpress.com/2018/05/american-airlines-says-no-emotional-support-goats.jpg",
+        imgAlt: "Goat sticking its tongue out",
+        id: "goat"
     },
     {
         name: "Crazy Cow",
