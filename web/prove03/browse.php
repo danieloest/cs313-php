@@ -1,9 +1,11 @@
 <?php session_start();
 
 // Add item to session
-$animal = $_GET['animal'];
-$quantity = $_GET['quantity'];
-$_SESSION[$animal] = $quantity;
+if (!is_null($aniaml) && !is_null($quantity)) {
+    $animal = $_GET['animal'];
+    $quantity = $_GET['quantity'];
+    $_SESSION[$animal] = $quantity;
+}
 
 ?>
 <!DOCTYPE html>
