@@ -3,7 +3,7 @@
 // Add item to session
 $animal = $_GET['animal'];
 $quantity = $_GET['quantity'];
-if (!is_null($aniaml) && !is_null($quantity)) {
+if (isset($aniaml) && isset($quantity)) {
     $_SESSION[$animal] = $quantity;
 }
 
