@@ -60,8 +60,7 @@ session_start();?>
             echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td>" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
-
-
+        echo "<tr><td></td><td></td><td>$" . $totalCost . "</td></tr>";
         echo "</table>";
 
     }
