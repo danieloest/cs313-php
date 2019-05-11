@@ -17,7 +17,7 @@
     include 'header.php'
     ?>
     <p class="bio">I am a senior majoring in Software Engineering. Besides programming, I love to listen to music. My favorite artists are Hippo Campus and Wallows.</p>
-    <h2>My Favorite Ablums</h2>
+    <h2 class="title">My Favorite Ablums</h2>
     <!-- Slideshow of favorite ablums -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
