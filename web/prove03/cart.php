@@ -38,18 +38,15 @@ session_start();?>
         <th>Remove</th>
         </tr>";
         if(isset($_SESSION["Peppy Puppy"])) {
-            echo "<tr><td>" . $_SESSION["Peppy Puppy"]->name . "</td><td>" . $_SESSION["Peppy Puppy"]->quantity . "</td><td>$" . $_SESSION["Peppy Puppy"]->price . "</td>
-            <td><a href=\"cart.php?remove=PP\">❌</a></td></tr>";
+            echo "<tr><td>" . $_SESSION["Peppy Puppy"]->name . "</td><td>" . $_SESSION["Peppy Puppy"]->quantity . "</td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Peppy Puppy"]->price . "</td></tr>";
             $totalCost += $_SESSION["Peppy Puppy"]->price;
         }
         if(isset($_SESSION["Krazy Kitty"])) {
-            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td>" . $_SESSION["Krazy Kitty"]->quantity . "</td><td>$" . $_SESSION["Krazy Kitty"]->price . "</td>
-            <td><a href=\"cart.php?remove=KK\">❌</a></td></tr>";
+            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td>" . $_SESSION["Krazy Kitty"]->quantity . "</td> <td><a href=\"cart.php?remove=KK\">❌</a></td><td>$" . $_SESSION["Krazy Kitty"]->price . "</td></tr>";
             $totalCost += $_SESSION["Krazy Kitty"]->price;
         }
         if(isset($_SESSION["Goat Galore"])) {
-            echo "<tr><td>" . $_SESSION["Goat Galore"]->name . "</td><td>" . $_SESSION["Goat Galore"]->quantity . "</td><td>$" . $_SESSION["Goat Galore"]->price . "</td>
-            <td><a href=\"cart.php?remove=GG\">❌</a></td></tr>";
+            echo "<tr><td>" . $_SESSION["Goat Galore"]->name . "</td><td>" . $_SESSION["Goat Galore"]->quantity . "</td><td><a href=\"cart.php?remove=GG\">❌</a></td><td>$" . $_SESSION["Goat Galore"]->price . "</td></tr>";
             $totalCost += $_SESSION["Goat Galore"]->price;
         }
         if(isset($_SESSION["Crazy Cow"])) {
@@ -58,13 +55,11 @@ session_start();?>
             $totalCost += $_SESSION["Crazy Cow"]->price;
         }
         if(isset($_SESSION["Blazing Birds"])) {
-            echo "<tr><td>" . $_SESSION["Blazing Birds"]->name . "</td><td>" . $_SESSION["Blazing Birds"]->quantity . "</td><td>$" . $_SESSION["Blazing Birds"]->price . "</td>
-            <td><a href=\"cart.php?remove=BB\">❌</a></td></tr>";
+            echo "<tr><td>" . $_SESSION["Blazing Birds"]->name . "</td><td>" . $_SESSION["Blazing Birds"]->quantity . "</td><td><a href=\"cart.php?remove=BB\">❌</a></td><td>$" . $_SESSION["Blazing Birds"]->price . "</td></tr>";
             $totalCost += $_SESSION["Blazing Birds"]->price;
         }
         if(isset($_SESSION["Geeky Gecko"])) {
-            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td>
-            <td><a href=\"cart.php?remove=GG\">❌</a></td></tr>";
+            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td>" . $_SESSION["Geeky Gecko"]->quantity . "</td><td><a href=\"cart.php?remove=GG\">❌</a></td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
         echo "<tr><td></td><td></td><td>$" . $totalCost . "</td></tr>";
