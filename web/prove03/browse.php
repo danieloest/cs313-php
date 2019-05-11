@@ -3,9 +3,9 @@
 // Add item to session
 $animal = $_GET['animal'];
 $quantity = $_GET['quantity'];
-if (isset($aniaml) && isset($quantity)) {
-    $_SESSION[$animal] = $quantity;
-}
+var_dump($animal);
+var_dump($quantity);
+$_SESSION[$animal] = $quantity;
 
 ?>
 <!DOCTYPE html>
