@@ -1,4 +1,11 @@
-<?php session_start();?>
+<?php session_start();
+
+// Add item to session
+$animal = $_GET['animal'];
+$quantity = $_GET['quantity'];
+$_SESSION[$animal] = $quantity;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
