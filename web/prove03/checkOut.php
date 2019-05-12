@@ -11,15 +11,16 @@
 </head>
 <body>
     <?php include 'header.php';?>
+    <div>
     <form action="confirm.php">
         <div class="group">
             <div class="form-group">
                 <label for="fName">First Name</label>
-                <input class="form-control smallInput" type="text" name="fName" id="fName" placeholder="Enter your first name">
+                <input class="form-control" type="text" name="fName" id="fName" placeholder="Enter your first name">
             </div>
             <div class="form-group">
                 <label for="fLame">Last Name</label>
-                <input class="form-control smallInput" type="text" name="lName" id="lName" placeholder="Enter your last name">
+                <input class="form-control" type="text" name="lName" id="lName" placeholder="Enter your last name">
             </div>
         </div>
         <div class="form-group">
@@ -37,40 +38,6 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-    <!-- <form action="confirm.php">
-        <table>
-            <div class="form-group">
-                <tr>
-                    <td> <label for="fName">First Name</label></td>
-                    <td><input class="form-control" type="text" name="fName" id="fName" placeholder="Enter your first name"></td>
-                </tr>
-            </div>
-            <div class="form-group">
-                <tr> 
-                    <td><label for="fLame">Last Name</label></td>
-                    <td><input type="text" name="lName" id="lName" placeholder="Enter your last name"></td>
-                </tr>
-            </div>
-            <div class="form-group">
-                <tr>
-                    <td><label for="email">Email</label></td>
-                    <td><input type="email" name="emil" id="emil" placeholder="Enter your email"></td>
-                </tr>
-            </div>
-            <div class="form-group">
-                <tr>            
-                    <td><label for="street">Address</label></td>
-                    <td><input type="text" name="street" id="street" placeholder="Street"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="city" id="city" placeholder="City"></td>
-                    <td><input type="text" name="state" id="state" placeholder="St" size="2"></td>
-                    <td><input type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5"></td>
-                </tr>
-            </div>
-        </table>
-    </form> -->
-    
+</div>
 </body>
 </html>
