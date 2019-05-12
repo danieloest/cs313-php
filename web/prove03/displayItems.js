@@ -66,7 +66,6 @@ function displayItems() {
 
 function addToCart(quantity, name, price) {
     let cost = quantity * price;
-    alert("You are ordering " + quantity + " " + name + " for $" + cost);
     let url = "browse.php?animal=" + name + "&quantity=" + quantity + "&cost=" + cost;
     window.location=url;
 }

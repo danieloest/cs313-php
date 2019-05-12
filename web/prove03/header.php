@@ -13,7 +13,7 @@
             </li> 
             <li id="cart" class="<?= ($activePage == 'cart') ? 'active':''; ?>">
                 <a href="cart.php">
-                    <h4>View Cart <span class="glyphicon glyphicon-shopping-cart"></span> <?php echo count($_SESSION); ?></h4>
+                    <h4>View Cart (<?php echo count($_SESSION); ?>)<span class="glyphicon glyphicon-shopping-cart"></span></h4>
                 </a>
             </li>
         </ul>
