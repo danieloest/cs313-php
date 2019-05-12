@@ -8,7 +8,6 @@ class Product {
     }
 }
 session_start();
-var_dump($_SESSION);
 $fName = $_GET['fName'];
 $lName = $_GET['lName'];
 $email = $_GET['email'];
@@ -36,8 +35,7 @@ $zipCode = $_GET['zipCode'];
         <p><?php echo $city . " " . $state; ?></p><br>
         <p><?php echo $zipCode; ?></p>
     </div>
-    <div class="flex-container">
-        <h2>Purchased Items</h2>
+        <h2 class="title">Purchased Items</h2>
         <?php
             echo "<table class=\"table\">
             <tr>
@@ -72,6 +70,5 @@ $zipCode = $_GET['zipCode'];
             echo "<tr><td></td><td></td><td>$" . $totalCost . "</td></tr>";
             $_SESSION['totalCost'] = $totalCost;
         ?>
-    </div>
 </body>
 </html>
