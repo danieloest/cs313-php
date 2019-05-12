@@ -32,8 +32,8 @@
             <input class="form-control" type="text" name="street" id="street" placeholder="Street">
             <input class="form-control" type="text" name="city" id="city" placeholder="City">
             <div class="group">
-                <input class="form-control" type="text" name="state" id="state" placeholder="State" size="2" id="state">
-                <input class="form-control" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5" id="zip">
+                <input class="form-control" type="text" name="state" id="state" placeholder="State" size="2">
+                <input class="form-control" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
