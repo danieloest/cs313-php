@@ -9,7 +9,6 @@
     }
 
 session_start();
-var_dump($_SESSION);
 // Add item to session
 $animal = $_GET['animal'];
 $quantity = $_GET['quantity'];
