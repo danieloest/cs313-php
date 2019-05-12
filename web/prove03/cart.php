@@ -64,7 +64,7 @@
             $totalCost += $_SESSION["Peppy Puppy"]->price;
         }
         if(isset($_SESSION["Krazy Kitty"])) {
-            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Krazy Kitty"]->quantity . "\" id=\"" . $_SESSION["Krazy Kitty"]->name . "quantity\"></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Krazy Kitty"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Krazy Kitty"]->quantity . "\" id=\"" . $_SESSION["Krazy Kitty"]->name . "quantity\"><p onclick=\"update()\">✔<p></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Krazy Kitty"]->price . "</td></tr>";
             $totalCost += $_SESSION["Krazy Kitty"]->price;
         }
         if(isset($_SESSION["Goat Galore"])) {
@@ -88,5 +88,10 @@
         $_SESSION['totalCost'] = $totalCost;
     }
     ?>
+    <script>
+        function update() {
+            alert("In update");
+        }
+    </script>
 </body>
 </html>
