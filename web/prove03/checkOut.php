@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <form action="confirm.php">
+    <!-- <form action="confirm.php">
         <div class="form-group">
             <label for="fName">First Name</label>
             <input type="text" name="fName" id="fName" placeholder="Enter your first name">
@@ -31,7 +31,41 @@
             <input type="text" name="state" id="state" placeholder="St" size="2">
             <input type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
         </div>
-        <button type="submit"></button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form> -->
+
+    <form action="confirm.php">
+        <table>
+            <div class="form-group">
+                <tr>
+                    <td> <label for="fName">First Name</label></td>
+                    <td><input type="text" name="fName" id="fName" placeholder="Enter your first name"></td>
+                </tr>
+            </div>
+            <div class="form-group">
+                <tr> 
+                    <td><label for="fLame">Last Name</label></td>
+                    <td><input type="text" name="lName" id="lName" placeholder="Enter your last name"></td>
+                </tr>
+            </div>
+            <div class="form-group">
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" name="emil" id="emil" placeholder="Enter your email"></td>
+                </tr>
+            </div>
+            <div class="form-group">
+                <tr>            
+                    <td><label for="street">Address</label></td>
+                    <td><input type="text" name="street" id="street" placeholder="Street"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="city" id="city" placeholder="City"></td>
+                    <td><input type="text" name="state" id="state" placeholder="St" size="2"></td>
+                    <td><input type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5"></td>
+                </tr>
+            </div>
+        </table>
     </form>
     
 </body>
