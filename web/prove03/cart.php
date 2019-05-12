@@ -64,7 +64,7 @@
             $totalCost += $_SESSION["Peppy Puppy"]->price;
         }
         if(isset($_SESSION["Krazy Kitty"])) {
-            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td><div class=\"flex-container\"><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Krazy Kitty"]->quantity . "\" id=\"kkQuantity\"><p onclick=\"update(kkQuantity.value)\">✔<p></div></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Krazy Kitty"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Krazy Kitty"]->name . "</td><td><div class=\"flex-container\"><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Krazy Kitty"]->quantity . "\" id=\"kkQuantity\"><p onclick=\"update(kkQuantity.value, kk)\">✔<p></div></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Krazy Kitty"]->price . "</td></tr>";
             $totalCost += $_SESSION["Krazy Kitty"]->price;
         }
         if(isset($_SESSION["Goat Galore"])) {
@@ -89,8 +89,8 @@
     }
     ?>
     <script>
-        function update(quantity) {
-            alert("In update. You are updating to: " + quantity);
+        function update(quantity, product) {
+            alert("In update. You are updating to: " + quantity + " for " + product);
         }
     </script>
 </body>
