@@ -1,4 +1,14 @@
-<?php session_start();
+<?php 
+class Product {
+    function Product($cost, $quantity, $animal) {
+        $this->price = $cost;
+        $this->name = $animal;
+        $this->quantity = $quantity;
+
+    }
+}
+session_start();
+var_dump($_SESSION);
 $fName = $_GET['fName'];
 $lName = $_GET['lName'];
 $email = $_GET['email'];
