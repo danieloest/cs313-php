@@ -84,7 +84,8 @@
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
         echo "<tr><td></td><td></td><td></td><td>$" . $totalCost . "</td></tr>";
-        echo "<tr><td></td><td></td><td></td><a href=\"checkOut.php\"><button type=\"button\" class=\"btn btn-primary pull-right checkOut\">Check out</button></a></tr></table>";
+        echo "<tr><td></td><td></td><td></td><td><a href=\"checkOut.php\"><button type=\"button\" class=\"btn btn-primary pull-right checkOut\">Check out</button></a></td></tr>";
+        
 
     }
     ?>
