@@ -43,5 +43,8 @@ img {
 .group {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+}
+
+.address {
+    text-align: center;
 }
