@@ -32,7 +32,7 @@ $zipCode = $_GET['zipCode'];
         <h2>Shipping address</h2>
         <p><?php echo $fName . " " . $lName; ?></p><br>
         <p><?php echo $street; ?></p><br>
-        <p><?php echo $city . " " . $state; ?></p><br>
+        <p><?php echo $city . ", " . $state; ?></p><br>
         <p><?php echo $zipCode; ?></p>
     </div>
         <h2 class="title">Purchased Items</h2>
