@@ -65,7 +65,12 @@ function displayItems() {
 }
 
 function addToCart(quantity, name, price) {
-    let cost = quantity * price;
-    let url = "browse.php?animal=" + name + "&quantity=" + quantity + "&cost=" + cost;
-    window.location=url;
+    if (quantity > 0) {
+        let cost = quantity * price;
+        let url = "browse.php?animal=" + name + "&quantity=" + quantity + "&cost=" + cost;
+        window.location=url;
+    }
+    else {
+        alert("Quantity cannot be less than or equal to 0");
+    }
 }
