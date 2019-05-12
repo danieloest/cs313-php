@@ -18,6 +18,7 @@ $zipCode = $_GET['zipCode'];
     <title>ZMart</title>
 </head>
 <body>
+<?php include 'header.php'; ?>
     <div class="address">
         <h5>Shipping address</h5>
         <p><?php echo $fName . " " . $lName; ?></p><br>
