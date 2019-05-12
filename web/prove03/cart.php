@@ -57,8 +57,8 @@
         <tr>
         <th>Item</th>
         <th>Quantity</th>
-        <th>Price</th>
         <th>Remove</th>
+        <th>Price</th>
         </tr>";
         if(isset($_SESSION["Peppy Puppy"])) {
             echo "<tr><td>" . $_SESSION["Peppy Puppy"]->name . "</td><td>" . $_SESSION["Peppy Puppy"]->quantity . "</td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Peppy Puppy"]->price . "</td></tr>";
@@ -85,7 +85,7 @@
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
         echo "<tr><td></td><td></td><td></td><td>$" . $totalCost . "</td></tr>";
-        echo "</table><a href=\"checkOut.php\"><button type=\"button\" class=\"btn btn-light float-right\">Check out</button></a>";
+        echo "<tr><tr><td></td><td></td><td></td><a href=\"checkOut.php\"><button type=\"button\" class=\"btn btn-primary pull-right checkOut\">Check out</button></a></tr></table>";
 
     }
     ?>
