@@ -87,7 +87,7 @@
         <th>Price</th>
         </tr>";
         if(isset($_SESSION["Peppy Puppy"])) {
-            echo "<tr><td>" . $_SESSION["Peppy Puppy"]->name . "</td><td><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Peppy Puppy"]->quantity . "\" id=\"" . $_SESSION["Peppy Puppy"]->name . "quantity\"></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Peppy Puppy"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Peppy Pupp"]->name . "</td><td><div class=\"flex-container\"><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Peppy Pupp"]->quantity . "\" id=\"ppQuantity\"><button type=\"button\" onclick=\"update(ppQuantity.value, 'pp')\">✔</button></div></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Peppy Pupp"]->price . "</td></tr>";
             $totalCost += $_SESSION["Peppy Puppy"]->price;
         }
         if(isset($_SESSION["Krazy Kitty"])) {
