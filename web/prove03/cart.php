@@ -45,11 +45,11 @@
             $_SESSION["Goat Galore"]->quantity = $quantity;
             $_SESSION["Goat Galore"]->price = $quantity * 75;
         }
-        else if ($product == "CC") {
+        else if ($product == "cc") {
             $_SESSION["Crazy Cow"]->quantity = $quantity;
             $_SESSION["Crazy Cow"]->price = $quantity * 80;
         }
-        else if ($product == "BB") {
+        else if ($product == "bb") {
             $_SESSION["Blazing Birds"]->quantity = $quantity;
             $_SESSION["Blazing Birds"]->price = $quantity * 80;
         }
@@ -99,15 +99,15 @@
             $totalCost += $_SESSION["Goat Galore"]->price;
         }
         if(isset($_SESSION["Crazy Cow"])) {
-            echo "<tr><td>" . $_SESSION["Crazy Cow"]->name . "</td><td><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Crazy Cow"]->quantity . "\" id=\"" . $_SESSION["Crazy Cow"]->name . "quantity\"></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Crazy Cow"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Crazy Cow"]->name . "</td><td><div class=\"flex-container\"><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Crazy Cow"]->quantity . "\" id=\"ccQuantity\"><button type=\"button\" onclick=\"update(ccQuantity.value, 'cc')\">✔</button></div></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Crazy Cow"]->price . "</td></tr>";
             $totalCost += $_SESSION["Crazy Cow"]->price;
         }
         if(isset($_SESSION["Blazing Birds"])) {
-            echo "<tr><td>" . $_SESSION["Blazing Birds"]->name . "</td><td><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Blazing Birds"]->quantity . "\" id=\"" . $_SESSION["Blazing Birds"]->name . "quantity\"></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Blazing Birds"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Blazing Birds"]->name . "</td><td><div class=\"flex-container\"><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Blazing Birds"]->quantity . "\" id=\"bbQuantity\"><button type=\"button\" onclick=\"update(bbQuantity.value, 'bb')\">✔</button></div></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Blazing Birds"]->price . "</td></tr>";
             $totalCost += $_SESSION["Blazing Birds"]->price;
         }
         if(isset($_SESSION["Geeky Gecko"])) {
-            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Geeky Gecko"]->quantity . "\" id=\"" . $_SESSION["Geeky Gecko"]->name . "quantity\"></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
+            echo "<tr><td>" . $_SESSION["Geeky Gecko"]->name . "</td><td><div class=\"flex-container\"><input class=\"inputNum\" type=\"number\" value=\"" . $_SESSION["Geeky Gecko"]->quantity . "\" id=\"GGeckoQuantity\"><button type=\"button\" onclick=\"update(GGeckoQuantity.value, 'GGecko')\">✔</button></div></td><td><a href=\"cart.php?remove=PP\">❌</a></td><td>$" . $_SESSION["Geeky Gecko"]->price . "</td></tr>";
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
         echo "<tr><td></td><td></td><td></td><td>$" . $totalCost . "</td></tr>";
