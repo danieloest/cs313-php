@@ -117,8 +117,13 @@
     ?>
     <script>
         function update(quantity, product) {
-            let url = "cart.php?product=" + product + "&quantity=" + quantity;
-            window.location.href = url;
+            if (quantity > 0) {
+                let url = "cart.php?product=" + product + "&quantity=" + quantity;
+                window.location.href = url;
+            }
+            else {
+                alert("Quantity cannot be less than or equal to 0");
+            }
         }
     </script>
 </body>
