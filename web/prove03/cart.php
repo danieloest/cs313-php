@@ -46,7 +46,6 @@
     <?php include 'header.php';?>
     <?php  
     // If there is nothing in the cart
-    var_dump($_SESSION);
     if (empty($_SESSION)) {
         echo "<h2>You have not added anything to your cart.";
     }
@@ -85,7 +84,7 @@
             $totalCost += $_SESSION["Geek Gecko"]->price;
         }
         echo "<tr><td></td><td></td><td></td><td>$" . $totalCost . "</td></tr>";
-        echo "<tr><tr><td></td><td></td><td></td><a href=\"checkOut.php\"><button type=\"button\" class=\"btn btn-primary pull-right checkOut\">Check out</button></a></tr></table>";
+        echo "<tr><td></td><td></td><td></td><a href=\"checkOut.php\"><button type=\"button\" class=\"btn btn-primary pull-right checkOut\">Check out</button></a></tr></table>";
 
     }
     ?>

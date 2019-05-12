@@ -29,10 +29,9 @@ if (!is_null($animal) && !is_null($quantity) && !is_null($cost)) {
     // }
     $product = new Product($cost, $quantity, $animal);
 
-    echo "Product: " . $product->name . "<br>Quantity: " . $product->quantity . "<br>Price: " . $product->price;
+    // echo "Product: " . $product->name . "<br>Quantity: " . $product->quantity . "<br>Price: " . $product->price;
 
     $_SESSION[$product->name] = $product;
-    var_dump($_SESSION);
 }
 
 ?>
