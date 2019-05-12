@@ -38,6 +38,7 @@
         }
         else  if ($product == "kk") {
             $_SESSION["Krazy Kitty"]->quantity = $quantity;
+            $_SESSION["Krazy Kitty"]->price = $quantity *25;
         }
         else if ($product == "GGoat") {
             $_SESSION["Goat Galore"]->quantity = $quantity;
