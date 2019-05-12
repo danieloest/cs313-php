@@ -48,3 +48,11 @@ form {
 .title {
     text-align: center;
 }
+
+#state {
+    width: 40%;
+}
+
+#zip {
+    width: 60%;
+}

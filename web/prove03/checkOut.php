@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <div class="info">
+    <div class="infoGIT">
     <form action="confirm.php">
         <div class="group">
             <div class="form-group">
@@ -32,8 +32,8 @@
             <input class="form-control" type="text" name="street" id="street" placeholder="Street">
             <input class="form-control" type="text" name="city" id="city" placeholder="City">
             <div class="group">
-                <input class="form-control" type="text" name="state" id="state" placeholder="St" size="2">
-                <input class="form-control" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
+                <input class="form-control" type="text" name="state" id="state" placeholder="St" size="2" id="state">
+                <input class="form-control" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5" id="zip">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
