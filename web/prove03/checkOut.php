@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <div class="infoGIT">
+    <div class="info">
     <form action="confirm.php">
         <div class="group">
             <div class="form-group">
