@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <!-- <form action="confirm.php">
+    <form action="confirm.php">
         <div class="form-group">
             <label for="fName">First Name</label>
             <input type="text" name="fName" id="fName" placeholder="Enter your first name">
@@ -32,9 +32,9 @@
             <input type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-    </form> -->
+    </form>
 
-    <form action="confirm.php">
+    <!-- <form action="confirm.php">
         <table>
             <div class="form-group">
                 <tr>
@@ -66,7 +66,7 @@
                 </tr>
             </div>
         </table>
-    </form>
+    </form> -->
     
 </body>
 </html>
