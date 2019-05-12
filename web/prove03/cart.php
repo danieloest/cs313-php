@@ -30,7 +30,28 @@
             unset($_SESSION["Geeky Gecko"]);
         }
     }
-    
+    $product = $_GET['product'];
+    $quantity = $_GET['quantity'];
+    if (isset($product) && isset($quantity)) {
+        if ($product == "pp") {
+            $_SESSION["Peppy Puppy"]->quantity = $quantity;
+        }
+        else  if ($product == "kk") {
+            $_SESSION["Krazy Kitty"]->quantity = $quantity;
+        }
+        else if ($product == "GGoat") {
+            $_SESSION["Goat Galore"]->quantity = $quantity;
+        }
+        else if ($product == "CC") {
+            $_SESSION["Crazy Cow"]->quantity = $quantity;
+        }
+        else if ($product == "BB") {
+            $_SESSION["Blazing Birds"]->quantity = $quantity;
+        }
+        else if ($product == "GGecko") {
+            $_SESSION["Geeky Gecko"]->quantity = $quantity;
+        }
+    }
     ?>
 <!DOCTYPE html>
 <html lang="en">
