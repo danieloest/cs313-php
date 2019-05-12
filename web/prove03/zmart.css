@@ -27,3 +27,15 @@ img {
     width: 70%;
     margin: auto;
 }
+
+.smallInput {
+    width: 20%;
+}
+
+.xsmallInput {
+    width: 5%;
+}
+
+.mediumInput {
+    width: 10%;
+}
