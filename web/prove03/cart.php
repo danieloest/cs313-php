@@ -35,6 +35,7 @@
     if (isset($product) && isset($quantity)) {
         if ($product == "pp") {
             $_SESSION["Peppy Puppy"]->quantity = $quantity;
+            $_SESSION["Peppy Puppy"]->price = $quantity * 40;
         }
         else  if ($product == "kk") {
             $_SESSION["Krazy Kitty"]->quantity = $quantity;
@@ -42,15 +43,19 @@
         }
         else if ($product == "GGoat") {
             $_SESSION["Goat Galore"]->quantity = $quantity;
+            $_SESSION["Goat Galore"]->price = $quantity * 75;
         }
         else if ($product == "CC") {
             $_SESSION["Crazy Cow"]->quantity = $quantity;
+            $_SESSION["Crazy Cow"]->price = $quantity * 80;
         }
         else if ($product == "BB") {
             $_SESSION["Blazing Birds"]->quantity = $quantity;
+            $_SESSION["Blazing Birds"]->price = $quantity * 80;
         }
         else if ($product == "GGecko") {
             $_SESSION["Geeky Gecko"]->quantity = $quantity;
+            $_SESSION["Geeky Gecko"]->price = $quantity * 55;
         }
     }
     ?>
