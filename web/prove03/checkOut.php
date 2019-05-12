@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include 'header.php';?>
-    <div>
+    <div class="info">
     <form action="confirm.php">
         <div class="group">
             <div class="form-group">
@@ -25,15 +25,15 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input class="form-control smallInput" type="email" name="email" id="email" placeholder="Enter your email">
+            <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email">
         </div>
         <div class="form-group">
             <label for="street">Address</label>
-            <input class="form-control smallInput" type="text" name="street" id="street" placeholder="Street">
-            <input class="form-control smallInput" type="text" name="city" id="city" placeholder="City">
+            <input class="form-control" type="text" name="street" id="street" placeholder="Street">
+            <input class="form-control" type="text" name="city" id="city" placeholder="City">
             <div class="group">
-                <input class="form-control xsmallInput" type="text" name="state" id="state" placeholder="St" size="2">
-                <input class="form-control mediumInput" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
+                <input class="form-control" type="text" name="state" id="state" placeholder="St" size="2">
+                <input class="form-control" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

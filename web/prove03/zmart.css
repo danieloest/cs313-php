@@ -28,16 +28,12 @@ img {
     margin: auto;
 }
 
-.smallInput {
-    width: 20%;
+form {
+    display: inline-block;
 }
 
-.xsmallInput {
-    width: 5%;
-}
-
-.mediumInput {
-    width: 10%;
+.info {
+    text-align: center;
 }
 
 .group {
