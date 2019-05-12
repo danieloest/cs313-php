@@ -22,3 +22,8 @@ img {
 .inputNum {
     width: 2.5em;
 }
+
+table {
+    width: 70%;
+    margin: auto;
+}
