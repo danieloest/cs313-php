@@ -91,6 +91,8 @@
     <script>
         function update(quantity, product) {
             alert("In update. You are updating to: " + quantity + " for " + product);
+            let url = "cart.php?product=" + product + "&quantity=" + quantity;
+            window.location.href = url;
         }
     </script>
 </body>
