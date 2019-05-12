@@ -12,7 +12,7 @@
 <body>
     <?php include 'header.php';?>
     <form action="confirm.php">
-        <div class="group">
+        <div class="flex-container">
             <div class="form-group">
                 <label for="fName">First Name</label>
                 <input class="form-control smallInput" type="text" name="fName" id="fName" placeholder="Enter your first name">
@@ -30,7 +30,7 @@
             <label for="street">Address</label>
             <input class="form-control smallInput" type="text" name="street" id="street" placeholder="Street">
             <input class="form-control smallInput" type="text" name="city" id="city" placeholder="City">
-            <div class="group">
+            <div class="flex-container">
                 <input class="form-control xsmallInput" type="text" name="state" id="state" placeholder="St" size="2">
                 <input class="form-control mediumInput" type="text" name="zipCode" id="zipCode" placeholder="Zip" size="5">
             </div>

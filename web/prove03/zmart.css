@@ -39,8 +39,3 @@ img {
 .mediumInput {
     width: 10%;
 }
-
-.group {
-    display: flex;
-    flex-direction: row;
-}
