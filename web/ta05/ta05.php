@@ -49,7 +49,7 @@ if (isset($_GET['search'])) {
 
 
    foreach ($rows as $scripture) {
-      echo "<b><a href=\"ta05.php?id=" . $scripture[id] . "\">" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b></a>";
+      echo "<b><a href=\"ta05.php?id=" . $scripture['id'] . "\">" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b></a>";
       echo '<br/>';
    }
 }
