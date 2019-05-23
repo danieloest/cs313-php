@@ -7,6 +7,6 @@
     <title>The Worst</title>
 </head>
 <body>
-    
+    <?php include 'connect.php';?>
 </body>
 </html>
