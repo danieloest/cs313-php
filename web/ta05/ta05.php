@@ -55,6 +55,7 @@ if (isset($_GET['search'])) {
 }
 else if (isset($_GET['id'])) {
    // We clicked on a scripture. Pull up the info
+   echo "We are pulling it up by id";
    $stmt = $db->prepare('SELECT book, chapter, verse, content FROM scripture WHERE id=:id');
    $stmt->execute(array(':id' => $_GET['id']));
    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
