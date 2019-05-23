@@ -8,5 +8,8 @@
 </head>
 <body>
     <?php include 'connect.php';?>
+    <div class="jumbotron">
+        <h1>The Worst</h1>
+    </div>
 </body>
 </html>
