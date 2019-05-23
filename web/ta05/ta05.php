@@ -12,9 +12,9 @@
    <h1>Scripture Resources</h1>
 </body>
 
-<textarea name="" id="searchbar" cols="6" rows="1"></textarea>
-<button onclick="search(document.getElementById('searchbar').value)"></button>
-
+<textarea name="" id="searchbar" cols="30 " rows="1"></textarea>
+<button onclick="search(document.getElementById('searchbar').value)">Search</button>
+<br>
 <script>
    function search(text) {
       let url = "ta05.php?search=" + text;
