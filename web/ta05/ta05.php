@@ -59,7 +59,7 @@ else if (isset($_GET['id'])) {
    $stmt = $db->prepare('SELECT book, chapter, verse, content FROM scripture WHERE id=:id');
    $stmt->execute(array(':id' => $_GET['id']));
    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-   foreach ($rows as $scripturee) {
+   foreach ($rows as $scripture) {
       echo "<b>" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b> - " . $scripture['content'];
       echo '<br/>';
    }
