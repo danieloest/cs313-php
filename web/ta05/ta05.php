@@ -17,14 +17,10 @@
 
 <script>
    function search(text) {
-      let url = "teamActivity05.php?search=" + text;
+      let url = "ta05.php?search=" + text;
       window.location = url;
    }
 </script>
-
-</html>
-
-
 <?php
 try {
    $dbUrl = getenv('DATABASE_URL');
@@ -45,17 +41,19 @@ try {
    die();
 }
 
+// If we are searching
 if (isset($_GET['search'])) {
-   $stmt = $db->prepare('SELECT book, chapter, verse, content FROM scripture WHERE book=:book');
+   $stmt = $db->prepare('SELECT book, chapter, verse, id FROM scripture WHERE book=:book');
    $stmt->execute(array(':book' => $_GET['search']));
    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
    foreach ($rows as $scripture) {
-      echo "<b>" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b> - " . $scripture['content'];
+      echo "<b><a href=\"teamActivity05.php?search=" . $scripture[id] . "\">" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b></a>";
       echo '<br/>';
    }
 } else {
+   // we are not searching
    foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $scripture) {
       echo "<b>" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b> - " . $scripture['content'];
       echo '<br/>';
@@ -63,3 +61,6 @@ if (isset($_GET['search'])) {
 }
 
 ?>
+
+</html>
+
