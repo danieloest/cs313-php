@@ -49,10 +49,21 @@ if (isset($_GET['search'])) {
 
 
    foreach ($rows as $scripture) {
-      echo "<b><a href=\"teamActivity05.php?search=" . $scripture[id] . "\">" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b></a>";
+      echo "<b><a href=\"ta05.php?id=" . $scripture[id] . "\">" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b></a>";
       echo '<br/>';
    }
-} else {
+}
+else if (isset($_GET['id'])) {
+   // We clicked on a scripture. Pull up the info
+   $stmt = $db->prepare('SELECT book, chapter, verse, content FROM scripture WHERE id=:id');
+   $stmt->execute(array(':id' => $_GET['id']));
+   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+   foreach ($rows as $scripturee) {
+      echo "<b>" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b> - " . $scripture['content'];
+      echo '<br/>';
+   }
+}
+else {
    // we are not searching
    foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $scripture) {
       echo "<b>" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b> - " . $scripture['content'];
