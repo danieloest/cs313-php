@@ -8,7 +8,7 @@
                         <ul class="dropdown-menu">
                                 <?php 
                                 // Display the sections. Query from database
-                                echo "In php";
+                                // echo "In php";
                                 foreach ($db->query('SELECT sectionName FROM clothingSection') as $section) {
                                         echo "<b>" . $section['sectionName'] . '<br/>';
                                 }
