@@ -10,6 +10,7 @@
                                 // Display the sections. Query from database
                                 foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
                                 {
+                                        echo "In loop!";
                                         echo "<li><a href=\"http://\"></a>". $row['sectionname'] ."</li>";
                                         echo "<h2>!!!</h2>";
                                 }
