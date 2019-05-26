@@ -10,7 +10,7 @@
                                         <?php 
                                         // Display the sections. Query from database
                                         foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
-                                                echo '<li><a href="section.php?section=' . $clothing['sectionid'] . '"/a>'. $clothing['sectionname'] .'</li>';
+                                                echo '<li><a href="section.php?section=' . $clothing['sectionid'] . '">'. $clothing['sectionname'] .'</a></li>';
                                         }
                                         ?>
                                 </ul>
