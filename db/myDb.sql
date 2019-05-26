@@ -1,38 +1,46 @@
 CREATE TABLE colors (
-    colorID     int     primary key,
+    colorID     serial     primary key,
     colorName       varchar(80)
 );
 
 CREATE TABLE product (
-    productID   int     primary key,
+    productID   serial     primary key,
     productName     varchar(80)
 );
+INSERT INTO product (productname) VALUES ('The Worst Shirt');
 
 CREATE TABLE size (
-    sizeID   int     primary key,
+    sizeID   serial     primary key,
     sizeName     varchar(80)
 );
 
 CREATE TABLE clothingSection (
-    sectionID   int     primary key,
+    sectionID   serial     primary key,
     sectionName     varchar(80)
 );
 
+INSERT INTO clothingSection (sectionName) VALUES ('Shirts');
+INSERT INTO clothingSection (sectionName) VALUES ('Pants');
+INSERT INTO clothingSection (sectionName) VALUES ('Accessories');
+
 CREATE TABLE clothing (
-    clothingID      int     primary key,
+    clothingID      serial     primary key,
     available       BOOLEAN,
     quantityOnHand  int,
     clothingSection int     references clothingSection(sectionID),
     price           float,
-    picture         text, -- the text is a url to the picture
+    mainPicture     text, -- the text is a url to the picture
+    previewPicture  text, -- the text is a url to the picture
+    sidePicture     text, -- the text is a url to the picture
     clothingName            varchar(80),
     size            int     references size(sizeID),
     productID       int     references product(productID),
     color           int     references colors(colorID)
 );
+INSERT INTO clothing(available, quntityOnHand, clothingSection, price, mainPicture, previewPicture, sidePicture, clothingname, size, productid, color)
 
 CREATE TABLE customer (
-    customerID      int     primary key,
+    customerID      serial     primary key,
     customerName    varchar(80),
     street          varchar(80),
     stateCode       varchar(2),
@@ -40,7 +48,7 @@ CREATE TABLE customer (
 );
 
 CREATE TABLE purchase (
-    purchaseID      int     primary key,
+    purchaseID      serial     primary key,
     customerID      int     references customer(customerID),
     shippingStreet  varchar(80),
     shippingState   varchar(80),
@@ -48,10 +56,14 @@ CREATE TABLE purchase (
 );
 
 CREATE TABLE purchasedItems(
-    purchasedItemsID int    primary key,
+    purchasedItemsID serial    primary key,
     purchaseID       int    references purchase(purchaseID),
     productID        int    references product(productID)
 );
+
+
+
+
 
 -- DROP TABLE colors;
 -- DROP TABLE product;
