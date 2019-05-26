@@ -6,6 +6,8 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
         echo "We are looking at: " . $clothing['clothingName'] . ". For $" . $clothing['price'];
+        echo $clothing['clothingName'];
+        echo $clothing['previewPicture'];
         echo '<img src="' . $clothing['previewPicture'] . '">';
 
     }
