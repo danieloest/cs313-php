@@ -9,9 +9,10 @@
                                 <?php 
                                 // Display the sections. Query from database
                                 // echo "In php";
-                                foreach ($db->query('SELECT sectionName FROM clothingSection') as $section) {
-                                        echo "<b>" . $section['sectionName'] . '<br/>';
-                                }
+                                foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $scripture) {
+                                        echo "<b>" . $scripture['book'] . " " . $scripture['chapter'] . ": " . $scripture['verse'] . "</b> - " . $scripture['content'];
+                                        echo '<br/>';
+                                     }
 
 
                                 // foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
