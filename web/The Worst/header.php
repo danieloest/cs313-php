@@ -12,7 +12,7 @@
                                 $statement = $db->query('SELECT sectionName FROM clothingSection');
                                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
-                                echo $row['sectionName'];;
+                                        echo $row['sectionName'];;
                                 }
 
 
