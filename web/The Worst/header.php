@@ -11,7 +11,7 @@
                                 foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
                                 {
                                         echo "<li><a href=\"http://\"></a>". $row['sectionname'] ."</li>";
-                                        echo "<h2>!!!</h2>"
+                                        echo "<h2>!!!</h2>";
                                 }
 
 
