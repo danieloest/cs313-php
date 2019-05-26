@@ -9,12 +9,20 @@
                                 <?php 
                                 // Display the sections. Query from database
                                 echo "In php";
-                                foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
+                                $statement = $db->query('SELECT sectionName FROM clothingSection');
+                                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                                 {
-                                        echo "In loop!";
-                                        echo "<li><a href=\"http://\"></a>". $row['sectionname'] ."</li>";
-                                        echo "<h2>!!!</h2>";
+                                echo $row['sectionName'];;
                                 }
+
+
+
+                                // foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
+                                // {
+                                //         echo "In loop!";
+                                //         echo "<li><a href=\"http://\"></a>". $row['sectionname'] ."</li>";
+                                //         echo "<h2>!!!</h2>";
+                                // }
 
 
 
