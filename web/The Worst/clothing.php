@@ -14,8 +14,9 @@
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
     <?php
-        $stmt = $db->prepare('SELECT clothingname, price, mainpicture, clothingid FROM clothing WHERE clothingsection=:section');
-        $stmt->execute(array(':section' => $section));
+        $id = $_GET['id'];
+        $stmt = $db->prepare('SELECT clothingname, price, mainpicture, clothingid FROM clothing WHERE clothingid=:id');
+        $stmt->execute(array(':id' => $id));
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $clothing) {
             echo '<h1 class="title">' . $clothing['clothingname'] . '</h1>';
