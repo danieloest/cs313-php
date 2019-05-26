@@ -9,5 +9,10 @@
 
 .menu-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+.sectionDisplay {
+    display: flex;
+    justify-content: space-evenly;
 }

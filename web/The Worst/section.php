@@ -13,6 +13,8 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
-    <?php include 'displaySection.php'; ?>
+    <div class="sectionDisplay">
+        <?php include 'displaySection.php'; ?>
+    </div>
 </body>
 </html>
