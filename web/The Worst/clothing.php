@@ -13,5 +13,16 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
+    <?php
+        $stmt = $db->prepare('SELECT clothingname, price, mainpicture, clothingid FROM clothing WHERE clothingsection=:section');
+        $stmt->execute(array(':section' => $section));
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($rows as $clothing) {
+            echo '<h1 class="title">' . $clothing['clothingname'] . '</h1>';
+            echo '<img src="' . $clothing['mainpicture'] . '">';
+            echo '<p class="price">' . $clothing['price'] . '</p>';
+    
+        }
+    ?>
 </body>
 </html>
