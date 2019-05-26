@@ -10,8 +10,7 @@
                                 // Display the sections. Query from database
                                 echo "In php";
                                 foreach ($db->query('SELECT sectionName FROM clothingSection') as $section) {
-                                        echo "<b>" . $scripture['sectionName'];
-                                        echo '<br/>';
+                                        echo "<b>" . $section['sectionName'] . '<br/>';
                                 }
 
 
