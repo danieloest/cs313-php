@@ -8,6 +8,7 @@
                         <ul class="dropdown-menu">
                                 <?php 
                                 // Display the sections. Query from database
+                                echo "In php";
                                 foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
                                 {
                                         echo "In loop!";
