@@ -2,6 +2,7 @@ CREATE TABLE colors (
     colorID     serial     primary key,
     colorName       varchar(80)
 );
+INSERT INTO colors (colorname) VALUES ('White');
 
 CREATE TABLE product (
     productID   serial     primary key,
@@ -13,6 +14,9 @@ CREATE TABLE size (
     sizeID   serial     primary key,
     sizeName     varchar(80)
 );
+INSERT INTO size (sizeName) VALUES ('Small');
+INSERT INTO size (sizeName) VALUES ('Medium');
+INSERT INTO size (sizeName) VALUES ('Large');
 
 CREATE TABLE clothingSection (
     sectionID   serial     primary key,
@@ -37,7 +41,7 @@ CREATE TABLE clothing (
     productID       int     references product(productID),
     color           int     references colors(colorID)
 );
-INSERT INTO clothing(available, quntityOnHand, clothingSection, price, mainPicture, previewPicture, sidePicture, clothingname, size, productid, color)
+INSERT INTO clothing(available, quantityOnHand, clothingSection, price, mainPicture, previewPicture, sidePicture, clothingname, size, productid, color) VALUES (true, 5, 1, 19.99, 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/main.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/side.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/preview.JPG', 'The Worst Shirt', 1, 1, 1);
 
 CREATE TABLE customer (
     customerID      serial     primary key,
