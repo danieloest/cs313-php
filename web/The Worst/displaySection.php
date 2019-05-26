@@ -5,7 +5,7 @@
     $stmt->execute(array(':section' => $section));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
-        echo '<div class="container"><a href=clothing.php?id=">' . $clothing['clothingid'] . '">';
+        echo '<div class="container"><a href=clothing.php?id="' . $clothing['clothingid'] . '">';
         echo '<div class=imgContainer><img src="' . $clothing['previewpicture'] . '"></div>';
         echo '<div><p class="name">' . $clothing['clothingname'] . ' ' . $clothing['price'] . '</p></div>';
         echo '</a></div>';
