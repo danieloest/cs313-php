@@ -14,7 +14,7 @@
     <title>The Worst</title>
 </head>
 <body>
-    <?php //include 'connect.php';?>
+    <?php include 'connect.php';?>
     <?php include 'header.php';?>
 </body>
 </html>

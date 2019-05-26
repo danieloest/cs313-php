@@ -1,24 +1,3 @@
-<?php     // Connect to the database
-    try {
-        $dbUrl = getenv('DATABASE_URL');
-     
-        $dbOpts = parse_url($dbUrl);
-     
-        $dbHost = $dbOpts["host"];
-        $dbPort = $dbOpts["port"];
-        $dbUser = $dbOpts["user"];
-        $dbPassword = $dbOpts["pass"];
-        $dbName = ltrim($dbOpts["path"], '/');
-     
-        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-     
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-     } catch (PDOException $ex) {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-     }
-     ?>
-
 <div class="jumbotron">
         <h1 class="title">The Worst</h1>
         <ul class="nav nav-tabs">
@@ -30,12 +9,10 @@
                                 <?php 
                                 // Display the sections. Query from database
                                 echo "In php";
-                                $statement = $db->query('SELECT sectionName FROM clothingSection');
-                                while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-                                {
-                                        echo $row['sectionName'];;
+                                foreach ($db->query('SELECT sectionName FROM clothingSection') as $section) {
+                                        echo "<b>" . $scripture['sectionName'];
+                                        echo '<br/>';
                                 }
-
 
 
                                 // foreach ($db->query('SELECT sectionname password FROM clothingsection') as $row)
