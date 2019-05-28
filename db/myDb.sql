@@ -78,11 +78,11 @@ CREATE TABLE purchasedItems(
 -- DROP TABLE purchase;
 -- DROP TABLE purchasedItems;
 
--- select * from colors;
--- select * from product;
--- select * from size;
--- select * from clothingSection;
--- select * from clothing;
--- select * from customer;
--- select * from purchase;
--- select * from purchasedItems;
+select * from colors;
+select * from product;
+select * from size;
+select * from clothingSection;
+select * from clothing;
+select * from customer;
+select * from purchase;
+select * from purchasedItems;
