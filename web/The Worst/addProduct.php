@@ -13,7 +13,7 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
-    <form action="" method="post">
+    <form action="addDB.php" method="post">
         <div class="form-group">
           <label for="name">
               Product Name
@@ -54,6 +54,7 @@
               ?>
           </select>
         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </body>
 </html>
