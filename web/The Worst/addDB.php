@@ -17,7 +17,8 @@
     var_dump($section);
     echo $section . '<br>';
 
-    $statement  = $db->prepare("INSERT INTO product(productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
+    // $statement  = $db->prepare("INSERT INTO product(productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
+    $statement  = $db->prepare("INSERT INTO product(:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
     // $stmt->bindValue(':productname', $name, PDO::PARAM_STR);
     // $stmt->bindValue(':mainpicture', $mainPicture, PDO::PARAM_STR);
     // $stmt->bindValue(':previewpicture', $previewPicture, PDO::PARAM_STR);
