@@ -41,7 +41,7 @@
         <div class="form-group">
           <label for="price">Price</label>
           <input type="number"
-            class="form-control" name="price" id="" aria-describedby="helpId" placeholder="">
+            class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0>
         </div>
         <div class="form-group">
           <label for="section">Clothing Section</label>
