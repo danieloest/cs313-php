@@ -18,6 +18,7 @@
     echo $section . '<br>';
 
     $statement  = $db->prepare("INSERT INTO product (productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
+    $statement->execute(array(':productname' => $name, ':mainPicture' => $mainPicture, ':previewPicture' => $previewPicture,':sidePicture' => $sidePicture, ':price' => $price, ':clothingsection' => $section));
     // $statement  = $db->prepare("INSERT INTO product(:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
     // $stmt->bindValue(':productname', $name, PDO::PARAM_STR);
     // $stmt->bindValue(':mainpicture', $mainPicture, PDO::PARAM_STR);
@@ -26,7 +27,6 @@
     // $stmt->bindValue(':price', $price, PDO::PARAM_STR);
     // $stmt->bindValue(':clothingsection', $price, PDO::PARAM_STR);
 
-    $statement->execute(array(':productname' => $name, ':mainpicture' => $mainPicture, ':preview[icture' => $previewPicture,':sidePicture' => $sidePicture, ':price' => $price, ':clothingsection' => $section));
 
     
     ?>
