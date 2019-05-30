@@ -26,7 +26,7 @@
     $stmt->bindParam(':sidepicture', $sidepicture);
     $stmt->bindParam(':price', $price);
     $stmt->bindParam(':clothingsection', $price);
-    $statement->execute();
+    $stmt->execute();
 
     
     ?>
