@@ -7,7 +7,8 @@
     else {
         echo "Main isn't set";
     }
-    vardump($_POST['mainPicture']);
+    
+    var_dump($_POST['mainPicture']);
     $previewPicture = $_POST['previewPicture'];
     $sidePicture = $_POST['sidePicture'];
     $price = $_POST['price'];
