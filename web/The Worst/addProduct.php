@@ -13,5 +13,13 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
+    <div class="form-group">
+      <label for="name">
+          Product Name
+      </label>
+      <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Product Name">
+    </div>
+    <form action="" method="post">
+    </form>
 </body>
 </html>
