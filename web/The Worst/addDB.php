@@ -1,7 +1,12 @@
 <?php
     include 'connect.php';
     $name = $_POST['name'];
-    $mainPicture = $_POST['mainPicture'];
+    if (!is_null($_POST['mainPicture'])) {
+        $mainPicture = $_POST['mainPicture'];
+    }
+    else {
+        echo "Main isn't set";
+    }
     $previewPicture = $_POST['previewPicture'];
     $sidePicture = $_POST['sidePicture'];
     $price = $_POST['price'];

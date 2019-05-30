@@ -24,19 +24,19 @@
           <label for="mainPicture">
               Main Picture
           </label>
-          <input type="text" class="form-control" name="mainPicture" id="" aria-describedby="helpId" placeholder="Product Name">
+          <input type="text" class="form-control" name="mainPicture" id="" aria-describedby="helpId" placeholder="Main Picture URL">
         </div>
         <div class="form-group">
             <label for="previewPicture">
               Preview Picture
             </label>
-             <input type="text" class="form-control" name="previewPicture" id="" aria-describedby="helpId" placeholder="Product Name">
+             <input type="text" class="form-control" name="previewPicture" id="" aria-describedby="helpId" placeholder="Preview Picture URL">
         </div>
         <div class="form-group">
             <label for="sidePicture">
               Side Picture
             </label>
-             <input type="text" class="form-control" name="sidePicture" id="" aria-describedby="helpId" placeholder="Product Name">
+             <input type="text" class="form-control" name="sidePicture" id="" aria-describedby="helpId" placeholder="Side Picture URL">
         </div>
         <div class="form-group">
           <label for="price">Price</label>
