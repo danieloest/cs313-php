@@ -13,13 +13,47 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
-    <div class="form-group">
-      <label for="name">
-          Product Name
-      </label>
-      <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Product Name">
-    </div>
     <form action="" method="post">
+        <div class="form-group">
+          <label for="name">
+              Product Name
+          </label>
+          <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Product Name">
+        </div>
+        <div class="form-group">
+          <label for="mainPicture">
+              Main Picture
+          </label>
+          <input type="text" class="form-control" name="mainPicture" id="" aria-describedby="helpId" placeholder="Product Name">
+        </div>
+        <div class="form-group">
+            <label for="previewPicture">
+              Preview Picture
+            </label>
+             <input type="text" class="form-control" name="previewPicture" id="" aria-describedby="helpId" placeholder="Product Name">
+        </div>
+        <div class="form-group">
+            <label for="sidePicture">
+              Side Picture
+            </label>
+             <input type="text" class="form-control" name="sidePicture" id="" aria-describedby="helpId" placeholder="Product Name">
+        </div>
+        <div class="form-group">
+          <label for="price"></label>
+          <input type="number"
+            class="form-control" name="price" id="" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="section"></label>
+          <select class="form-control" name="section" id="">
+              <?php
+              // Display the sections. Query from database
+              foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
+                echo '<option value=' . $clothing['sectionid'] . '>' . $clothing['sectionname'] . '</option>';
+        }
+              ?>
+          </select>
+        </div>
     </form>
 </body>
 </html>
