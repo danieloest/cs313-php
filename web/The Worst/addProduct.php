@@ -39,12 +39,12 @@
              <input type="text" class="form-control" name="sidePicture" id="" aria-describedby="helpId" placeholder="Product Name">
         </div>
         <div class="form-group">
-          <label for="price"></label>
+          <label for="price">Price</label>
           <input type="number"
             class="form-control" name="price" id="" aria-describedby="helpId" placeholder="">
         </div>
         <div class="form-group">
-          <label for="section"></label>
+          <label for="section">Clothing Section</label>
           <select class="form-control" name="section" id="">
               <?php
               // Display the sections. Query from database
