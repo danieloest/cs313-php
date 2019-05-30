@@ -4,8 +4,8 @@
     $mainPicture = $_POST['mainPicture'];    
     $previewPicture = $_POST['previewPicture'];
     $sidePicture = $_POST['sidePicture'];
-    $price = $_POST['price'];
-    $section = $_POST['section'];
+    $price = (float)$_POST['price'];
+    $section = (int)$_POST['section'];
     
     
     echo $name . '<br>';
