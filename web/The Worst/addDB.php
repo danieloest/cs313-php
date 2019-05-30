@@ -1,9 +1,9 @@
 <?php
     include 'connect.php';
     $name = $_POST['name'];
-    $mainPicture = $_POST['mainPicture'];    
-    $previewPicture = $_POST['previewPicture'];
-    $sidePicture = $_POST['sidePicture'];
+    $mainpicture = $_POST['mainPicture'];    
+    $previewpicture = $_POST['previewPicture'];
+    $sidepicture = $_POST['sidePicture'];
     $price = (float)$_POST['price'];
     $section = (int)$_POST['section'];
     
