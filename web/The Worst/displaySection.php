@@ -1,6 +1,6 @@
 <?php
     $section = $_GET['section'];
-    $stmt = $db->prepare('SELECT clothingname, price, previewpicture, clothingid FROM clothing WHERE clothingsection=:section');
+    $stmt = $db->prepare('SELECT clothingname, price, previewpicture, clothingid FROM product WHERE clothingsection=:section');
     $stmt->execute(array(':section' => $section));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
