@@ -15,11 +15,11 @@
     <?php include 'header.php';?>
     <?php
         $id = $_GET['id'];
-        $stmt = $db->prepare('SELECT clothingname, price, mainpicture, clothingid FROM clothing WHERE clothingid=:id');
+        $stmt = $db->prepare('SELECT productname, price, mainpicture, productid FROM product WHERE productid=:id');
         $stmt->execute(array(':id' => $id));
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $clothing) {
-            echo '<h1 class="title">' . $clothing['clothingname'] . '</h1>';
+            echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
             echo '<img src="' . $clothing['mainpicture'] . '">';
             echo '<p class="price">' . $clothing['price'] . '</p>';
     
