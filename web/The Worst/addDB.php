@@ -15,13 +15,15 @@
     echo $price . '<br>';
     echo $section . '<br>';
 
-    $statement  = $db->prepare("INSERT INTO product(name, mainPicture, previewPicture, sidePicture, price, section) VALUES (:name, :mainPicutre, :previewPicture, :sidePicture, :price, :section);");
-    // $stmt->bindValue(':name', $name, PDO::PARAM_STR);
-    // $stmt->bindValue(':mainPicture', $mainPicture, PDO::PARAM_STR);
-    // $stmt->bindValue(':previewPicture', $previewPicture, PDO::PARAM_STR);
-    // $stmt->bindValue(':sidePicture', $sidePicture, PDO::PARAM_STR);
-    // $stmt->bindValue(':price', $price, PDO::??);
-    $statement->execute(array(':name' => $name, ':mainPicture' => $mainPicture, ':previewPicture' => $previewPicture,':sidePicture' => $sidePicture, ':price' => $price, ':section' => $section));
+    $statement  = $db->prepare("INSERT INTO product(productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
+    // $stmt->bindValue(':productname', $name, PDO::PARAM_STR);
+    // $stmt->bindValue(':mainpicture', $mainPicture, PDO::PARAM_STR);
+    // $stmt->bindValue(':previewpicture', $previewPicture, PDO::PARAM_STR);
+    // $stmt->bindValue(':sidepicture', $sidePicture, PDO::PARAM_STR);
+    // $stmt->bindValue(':price', $price, PDO::PARAM_STR);
+    // $stmt->bindValue(':clothingsection', $price, PDO::PARAM_STR);
+
+    $statement->execute(array(':productname' => $name, ':mainpicture' => $mainpicture, ':preview[icture' => $previewPicture,':sidePicture' => $sidePicture, ':price' => $price, ':clothingsection' => $section));
 
     
     ?>
