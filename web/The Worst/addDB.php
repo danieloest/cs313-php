@@ -12,7 +12,9 @@
     echo $mainPicture . '<br>';
     echo $previewPicture . '<br>';
     echo $sidePicture . '<br>';
+    var_dump($price);
     echo $price . '<br>';
+    var_dump($section);
     echo $section . '<br>';
 
     $statement  = $db->prepare("INSERT INTO product(productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
