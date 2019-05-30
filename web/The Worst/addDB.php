@@ -21,9 +21,9 @@
     // $statement->execute(array(':productname' => $name, ':mainpicture' => $mainpicture, ':previewpicture' => $previewpicture,':sidepicture' => $sidepicture, ':price' => $price, ':clothingsection' => $section));
     // $statement  = $db->prepare("INSERT INTO product(:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
     $stmt->bindValue(':productname', $name);
-    $stmt->bindValue(':mainpicture', $mainPicture);
-    $stmt->bindValue(':previewpicture', $previewPicture);
-    $stmt->bindValue(':sidepicture', $sidePicture);
+    $stmt->bindValue(':mainpicture', $mainpicture);
+    $stmt->bindValue(':previewpicture', $previewpicture);
+    $stmt->bindValue(':sidepicture', $sidepicture);
     $stmt->bindValue(':price', $price);
     $stmt->bindValue(':clothingsection', $price);
     $statement->execute();
