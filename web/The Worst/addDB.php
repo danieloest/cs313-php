@@ -9,9 +9,9 @@
     
     
     echo $name . '<br>';
-    echo $mainPicture . '<br>';
-    echo $previewPicture . '<br>';
-    echo $sidePicture . '<br>';
+    echo $mainpicture . '<br>';
+    echo $previewpicture . '<br>';
+    echo $sidepicture . '<br>';
     var_dump($price);
     echo $price . '<br>';
     var_dump($section);
