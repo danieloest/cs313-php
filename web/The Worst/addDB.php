@@ -4,7 +4,7 @@
     $mainpicture = $_POST['mainPicture'];    
     $previewpicture = $_POST['previewPicture'];
     $sidepicture = $_POST['sidePicture'];
-    $price = (float)$_POST['price'];
+    $price = (double)$_POST['price'];
     $section = (int)$_POST['section'];
     
     
