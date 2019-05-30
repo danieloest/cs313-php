@@ -20,12 +20,12 @@
     $statement  = $db->prepare("INSERT INTO product (productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainpicutre, :previewpicture, :sidepicture, :price, :clothingsection);");
     // $statement->execute(array(':productname' => $name, ':mainpicture' => $mainpicture, ':previewpicture' => $previewpicture,':sidepicture' => $sidepicture, ':price' => $price, ':clothingsection' => $section));
     // $statement  = $db->prepare("INSERT INTO product(:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
-    $stmt->bindValue(':productname', $name);
-    $stmt->bindValue(':mainpicture', $mainpicture);
-    $stmt->bindValue(':previewpicture', $previewpicture);
-    $stmt->bindValue(':sidepicture', $sidepicture);
-    $stmt->bindValue(':price', $price);
-    $stmt->bindValue(':clothingsection', $price);
+    $stmt->bindParam(':productname', $name);
+    $stmt->bindParam(':mainpicture', $mainpicture);
+    $stmt->bindParam(':previewpicture', $previewpicture);
+    $stmt->bindParam(':sidepicture', $sidepicture);
+    $stmt->bindParam(':price', $price);
+    $stmt->bindParam(':clothingsection', $price);
     $statement->execute();
 
     
