@@ -16,7 +16,7 @@
     echo $section . '<br>';
 
     $statement  = $db->prepare("INSERT INTO product VALUES (:name, :mainPicutre, :previewPicture, :sidePicture, :price, :section);");
-    $statement->execute(array(':name' => $name, ':mainPicture' => $mainPicture, ':sidePicture' => sidePicture, ':price' => price, ':section' => $section));
+    $statement->execute(array(':name' => $name, ':mainPicture' => $mainPicture, ':previewPicture' => $previewPicture,':sidePicture' => sidePicture, ':price' => price, ':section' => $section));
 
     
     ?>
