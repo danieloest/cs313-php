@@ -18,15 +18,15 @@
     echo $section . '<br>';
 
     $statement  = $db->prepare("INSERT INTO product (productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainpicutre, :previewpicture, :sidepicture, :price, :clothingsection);");
-    $statement->execute(array(':productname' => $name, ':mainpicture' => $mainpicture, ':previewpicture' => $previewpicture,':sidepicture' => $sidepicture, ':price' => $price, ':clothingsection' => $section));
+    // $statement->execute(array(':productname' => $name, ':mainpicture' => $mainpicture, ':previewpicture' => $previewpicture,':sidepicture' => $sidepicture, ':price' => $price, ':clothingsection' => $section));
     // $statement  = $db->prepare("INSERT INTO product(:productname, :mainPicutre, :previewPicture, :sidePicture, :price, :clothingsection);");
-    // $stmt->bindValue(':productname', $name, PDO::PARAM_STR);
-    // $stmt->bindValue(':mainpicture', $mainPicture, PDO::PARAM_STR);
-    // $stmt->bindValue(':previewpicture', $previewPicture, PDO::PARAM_STR);
-    // $stmt->bindValue(':sidepicture', $sidePicture, PDO::PARAM_STR);
-    // $stmt->bindValue(':price', $price, PDO::PARAM_STR);
-    // $stmt->bindValue(':clothingsection', $price, PDO::PARAM_STR);
-
+    $stmt->bindValue(':productname', $name);
+    $stmt->bindValue(':mainpicture', $mainPicture);
+    $stmt->bindValue(':previewpicture', $previewPicture);
+    $stmt->bindValue(':sidepicture', $sidePicture);
+    $stmt->bindValue(':price', $price);
+    $stmt->bindValue(':clothingsection', $price);
+    $statement->execute();
 
     
     ?>
