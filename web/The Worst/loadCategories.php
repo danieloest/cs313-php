@@ -1,5 +1,5 @@
 <?php
 include 'connect.php';
-$category = $_GET['value'];
+$category = $_GET['category'];
 echo "this is the response??? The value sent was " . $category;
 ?>
