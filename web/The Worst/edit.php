@@ -24,15 +24,14 @@
     </select>
     <script>
     function loadCategory() {
-        alert("in load category");
         var e = document.getElementById("selector");
         var value = e.options[e.selectedIndex].value;
-        alert("Value: " + value);
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
             // document.getElementById("demo").innerHTML = this.responseText;
-            console.log(this.responseText);
+                e.innerHTML = this.responseText;
+                console.log(this.responseText);
             }
         };
         xhttp.open("GET", "loadCategories.php?category=" + value, true);
