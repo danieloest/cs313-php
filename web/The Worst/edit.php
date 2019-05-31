@@ -34,8 +34,8 @@
             console.log(this.responseText);
             }
         };
-        xhttp.open("GET", "loadCategories.php", true);
-        xhttp.send(value);
+        xhttp.open("GET", "loadCategories.php?category=" + value, true);
+        xhttp.send();
     }
     </script>
 </body>
