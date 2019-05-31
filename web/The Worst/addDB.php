@@ -25,8 +25,8 @@
     $stmt->bindParam(':mainpicture', $mainpicture);
     $stmt->bindParam(':previewpicture', $previewpicture);
     $stmt->bindParam(':sidepicture', $sidepicture);
-    $stmt->bindParam(':price', $price, $PDO_);
-    $stmt->bindParam(':clothingsection', $price);
+    $stmt->bindParam(':price', $price);
+    $stmt->bindParam(':clothingsection', $section);
     $stmt->execute();
 
     
