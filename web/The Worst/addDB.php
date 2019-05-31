@@ -16,6 +16,7 @@
     echo $price . '<br>';
     var_dump($section);
     echo $section . '<br>';
+    // 
 
     $stmt  = $db->prepare("INSERT INTO product (productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainpicture, :previewpicture, :sidepicture, :price, :clothingsection);");
     // $statement->execute(array(':productname' => $name, ':mainpicture' => $mainpicture, ':previewpicture' => $previewpicture,':sidepicture' => $sidepicture, ':price' => $price, ':clothingsection' => $section));
