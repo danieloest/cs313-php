@@ -30,7 +30,7 @@
         $stmt->bindParam(':clothingsection', $section);
         $stmt->execute();
 
-        echo '<h2>Added!</h2>'
+        echo '<h2>Added!</h2>';
         
         ?>
     
