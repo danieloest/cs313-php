@@ -27,6 +27,7 @@
         alert("in load category");
         var e = document.getElementById("selector");
         var value = e.options[e.selectedIndex].value;
+        alert("Value: " + value);
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
