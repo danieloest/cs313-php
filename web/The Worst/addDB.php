@@ -4,7 +4,7 @@
     $mainpicture = $_POST['mainPicture'];    
     $previewpicture = $_POST['previewPicture'];
     $sidepicture = $_POST['sidePicture'];
-    $price = (double)$_POST['price'];
+    $price = (float)$_POST['price'];
     $section = (int)$_POST['section'];
     
     
@@ -25,7 +25,7 @@
     $stmt->bindParam(':mainpicture', $mainpicture);
     $stmt->bindParam(':previewpicture', $previewpicture);
     $stmt->bindParam(':sidepicture', $sidepicture);
-    $stmt->bindParam(':price', $price);
+    $stmt->bindParam(':price', $price, $PDO_);
     $stmt->bindParam(':clothingsection', $price);
     $stmt->execute();
 
