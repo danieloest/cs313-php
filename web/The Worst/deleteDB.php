@@ -15,7 +15,7 @@
     include 'header.php';
     $id = $_GET['id'];
     $stmt = $db->prepare('DELETE FROM product WHERE productid=:id;');
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->bindValue(':productid', $id, PDO::PARAM_INT);
     $stmt->execute();
     ?>
     <h2>The product has been removed!</h2>;
