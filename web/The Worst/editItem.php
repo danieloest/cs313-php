@@ -43,10 +43,14 @@
             <input type="number"
               class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '">
           </div>';
-
+          echo '<select>';
+          foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
+            echo '<option value="' . $clothing['sectionid'] . '">'. $clothing['sectionname'] .'</option>';
+        }
+        echo '</select>';
 
     } ?>
-    <input type="submit" value="">
+    <input type="submit" value="Update Item">
     </form>
 </body>
 </html>
