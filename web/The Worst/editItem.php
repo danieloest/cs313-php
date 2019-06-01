@@ -35,14 +35,14 @@
         <label for="preview">Preview Picture</label>
         <input type="text" class="form-control" name="preview" id="" aria-describedby="helpId" placeholder="" value="'. $product['previewpicture'] .'">
       </div>
+      <div class="form-group">
+        <label for="side">Side Picture</label>
+        <input type="text" class="form-control" name="side" id="" aria-describedby="helpId" placeholder="" value="'. $product['sidepicture'] .'">
+      </div>
       <label for="price">Price</label>
             <input type="number"
-              class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0>
-          </div>
-      <div class="form-group">
-        <label for=""></label>
-        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-      </div>';
+              class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '>
+          </div>';
 
 
         // echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
