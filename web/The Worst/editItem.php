@@ -11,7 +11,7 @@
     <title>The Worst</title>
 </head>
 <body>
-    <form action="editDB.php" method="POST">
+    <form action="editDB.php?id=<?php echo $id; ?>" method="POST">
     <?php
     include 'connect.php';
     include 'header.php';
@@ -24,27 +24,27 @@
         $product = $clothing;
         echo '
         <div class="form-group">
-        <label for="name">Product Name</label>
-        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="" value="' . $product['productname'] .  '">
+        <label for="productname">Product Name</label>
+        <input type="text" class="form-control" name="productname" id="productname" aria-describedby="helpId" placeholder="" value="' . $product['productname'] .  '">
       </div>
       <div class="form-group">
-        <label for="main">Main Picture</label>
-        <input type="text" class="form-control" name="main" id="main" aria-describedby="helpId" placeholder="" value="'. $product['mainpicture'] .'">
+        <label for="mainpicture">Main Picture</label>
+        <input type="text" class="form-control" name="mainpicture" id="mainpicture" aria-describedby="helpId" placeholder="" value="'. $product['mainpicture'] .'">
       </div>
       <div class="form-group">
-        <label for="preview">Preview Picture</label>
-        <input type="text" class="form-control" name="preview" id="preview" aria-describedby="helpId" placeholder="" value="'. $product['previewpicture'] .'">
+        <label for="previewpicture">Preview Picture</label>
+        <input type="text" class="form-control" name="previewpicture" id="previewpicture" aria-describedby="helpId" placeholder="" value="'. $product['previewpicture'] .'">
       </div>
       <div class="form-group">
-        <label for="side">Side Picture</label>
-        <input type="text" class="form-control" name="side" id="side" aria-describedby="helpId" placeholder="" value="'. $product['sidepicture'] .'">
+        <label for="sidepicture">Side Picture</label>
+        <input type="text" class="form-control" name="sidepicture" id="sidepicture" aria-describedby="helpId" placeholder="" value="'. $product['sidepicture'] .'">
       </div>
       <label for="price">Price</label>
             <input type="number"
               class="form-control" name="price" id="price" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '">
           </div>';
           echo '<div class="form-group">
-          <label for="section">Section</label> <select class="form-control" name="section" id="section">';
+          <label for="clothingsection">Section</label> <select class="form-control" name="clothingsection" id="clothingsection">';
           foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
             echo '<option value="' . $clothing['sectionid'] . '"';
             if ($clothing['sectionid'] == $product['clothingsection']) {

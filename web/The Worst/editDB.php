@@ -19,7 +19,7 @@
     $mainpicture = $_POST['mainpicture'];
     $previewpicture = $_POST['previewpicture'];
     $sidepicture = $_POST['sidepicture'];
-    $productid = $_POST['productid'];
+    $productid = $_GET['id'];
     $clothingsection = $_POST['clothingsection'];
 
     echo "<br>Product name: " . $productname;
