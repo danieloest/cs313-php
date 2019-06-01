@@ -45,35 +45,7 @@
           </div>';
 
 
-        // echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
-        // echo '<img src="' . $clothing['mainpicture'] . '">';
-        // echo '<p class="price">' . $clothing['price'] . '</p>';
-
-    }
-
-    // echo "<h2>My stuff:<br>Name: " . $product['productname'] . "<br>Price: " . $proudct['price'] . '</h2>';
-
-    ?>
-    <!-- <div class="form-group">
-      <label for="name">Product Name</label>
-      <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value=<?php echo $product['productname']; ?>>
-    </div>
-    <div class="form-group">
-      <label for=""></label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-    </div>
-    <div class="form-group">
-      <label for=""></label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-    </div>
-    <label for="price">Price</label>
-          <input type="number"
-            class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0>
-        </div>
-    <div class="form-group">
-      <label for=""></label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-    </div> -->
+    } ?>
     </form>
 </body>
 </html>
