@@ -44,7 +44,7 @@
               class="form-control" name="price" id="price" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '">
           </div>';
           echo '<div class="form-group">
-          <label for="section">Section</label> <select class="class="form-control" name="section" id="section">';
+          <label for="section">Section</label> <select class="form-control" name="section" id="section">';
           foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
             echo '<option value="' . $clothing['sectionid'] . '"';
             if ($clothing['sectionid'] == $product['clothingsection']) {
@@ -57,5 +57,6 @@
     } ?>
     <input type="submit" value="Update Item" class="btn btn-info">
     </form>
+    <a href="deleteDB.php" class="btn btn-danger" role="button">Delete</a>
 </body>
 </html>
