@@ -22,6 +22,7 @@
         }
         ?>
     </select>
+    <div id="test"></div>
     <script>
     function loadCategory() {
         var e = document.getElementById("selector");
@@ -30,7 +31,7 @@
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
             // document.getElementById("demo").innerHTML = this.responseText;
-                e.appendChild(this.responseText);
+            document.getElementById("test").appendChild(this.responseText);
                 console.log(this.responseText);
             }
         };
