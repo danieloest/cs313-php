@@ -57,6 +57,7 @@
     } ?>
     <input type="submit" value="Update Item" class="btn btn-info">
     </form>
-    <a href="deleteDB.php" class="btn btn-danger" role="button">Delete</a>
+    <br>
+    <a href="deleteDB.php?id=<?php echo $id ?>" class="btn btn-danger" role="button">Delete</a>
 </body>
 </html>
