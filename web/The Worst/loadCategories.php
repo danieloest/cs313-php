@@ -1,11 +1,11 @@
 <?php
 include 'connect.php';
-$category = $_GET['category'];
+$category = (int)$_GET['category'];
 // echo "this is the response??? The value sent was " . $category;
 // echo "<br>!2";
 // echo "<br>!3";   
 
-$stmt - $db->prepare("SELECT productid, productname, previewpicture WHERE productid = :productid;");
+$stmt - $db->prepare("SELECT productid, productname, previewpicture FROM product WHERE productid = :productid;");
 // $stmt->execute(array(':productid' => $category));
 $stmt->bindValue(':productid', $category);
 $stmt->execute();
