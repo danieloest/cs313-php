@@ -26,6 +26,9 @@
         echo '<p class="price">' . $clothing['price'] . '</p>';
 
     }
+
+    echo "<h2>My stuff:<br>Name: " . $product['productname'] . "<br>Price: " . $proudct['price'] . '</h2>';
+
     ?>
     <form action="">
     <div class="form-group">
