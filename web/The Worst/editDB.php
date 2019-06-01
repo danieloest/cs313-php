@@ -29,7 +29,23 @@
     echo "<br>sidepicture: " . $sidepicture;
     echo "<br>productid: " . $productid;
     echo "<br>clothingsection: " . $clothingsection;
+
+    // $stmt  = $db->prepare("INSERT INTO product (productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainpicture, :previewpicture, :sidepicture, :price, :clothingsection);");
+    $stmt  = $db->prepare("UPDATE product
+    SET productname = :productname,
+    mainpicture = :mainpicture,
+    previewpicture = :previewpicture,
+    sidepicture = :sidepicture,
+    price = :price,
+    clothingsection = :clothingsection;");
+    $stmt->bindParam(':productname', $productname);
+    $stmt->bindParam(':mainpicture', $mainpicture);
+    $stmt->bindParam(':previewpicture', $previewpicture);
+    $stmt->bindParam(':sidepicture', $sidepicture);
+    $stmt->bindParam(':price', $price);
+    $stmt->bindParam(':clothingsection', $clothingsection);
+    $stmt->execute();
      ?>
-     <h2></h2>
+     <h2>edited!</h2>
 </body>
 </html>
