@@ -11,7 +11,7 @@
     <title>The Worst</title>
 </head>
 <body>
-    <form action="">
+    <form action="editDB.php" method="POST">
     <?php
     include 'connect.php';
     include 'header.php';
@@ -46,6 +46,7 @@
 
 
     } ?>
+    <input type="submit" value="">
     </form>
 </body>
 </html>
