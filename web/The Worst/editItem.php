@@ -11,7 +11,6 @@
     <title>The Worst</title>
 </head>
 <body>
-    <form action="editDB.php?id=<?php echo $id; ?>" method="POST">
     <?php
     include 'connect.php';
     include 'header.php';
