@@ -48,6 +48,6 @@
     $stmt->bindParam(':productid', $productid);
     $stmt->execute();
      ?>
-     <h2>edited!</h2>
+     <h2 class="message">The product has been updated.</h2>
 </body>
 </html>
