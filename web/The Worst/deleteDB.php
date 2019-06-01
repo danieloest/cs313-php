@@ -13,7 +13,7 @@
 <body>
     <?php include 'connect.php';
     include 'header.php';
+    $id = $_GET['id'];
     ?>
-    <
 </body>
 </html>
