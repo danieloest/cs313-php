@@ -32,8 +32,8 @@
         <input type="text" class="form-control" name="main" id="" aria-describedby="helpId" placeholder="" value="'. $product['mainpicture'] .'">
       </div>
       <div class="form-group">
-        <label for=""></label>
-        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+        <label for="preview">Preview Picture</label>
+        <input type="text" class="form-control" name="preview" id="" aria-describedby="helpId" placeholder="" value="'. $product['previewpicture'] .'">
       </div>
       <label for="price">Price</label>
             <input type="number"
