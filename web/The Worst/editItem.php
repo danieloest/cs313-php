@@ -16,6 +16,7 @@
     include 'connect.php';
     include 'header.php';
     $id = $_GET['id'];
+    echo '<form action="editDB.php?id=' . $id . '" method="POST">';
     $product;
     $stmt = $db->prepare('SELECT productname, price, mainpicture, previewpicture, sidepicture, productid, clothingsection FROM product WHERE productid=:id');
     $stmt->execute(array(':id' => $id));
