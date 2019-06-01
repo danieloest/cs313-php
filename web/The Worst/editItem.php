@@ -11,6 +11,7 @@
     <title>The Worst</title>
 </head>
 <body>
+    <form action="">
     <?php
     include 'connect.php';
     include 'header.php';
@@ -21,17 +22,39 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
         $product = $clothing;
-        echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
-        echo '<img src="' . $clothing['mainpicture'] . '">';
-        echo '<p class="price">' . $clothing['price'] . '</p>';
+        echo '
+        <div class="form-group">
+        <label for="name">Product Name</label>
+        <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value=<?php echo $product[\'productname\']; ?>>
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+      </div>
+      <label for="price">Price</label>
+            <input type="number"
+              class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0>
+          </div>
+      <div class="form-group">
+        <label for=""></label>
+        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+      </div>';
+
+
+        // echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
+        // echo '<img src="' . $clothing['mainpicture'] . '">';
+        // echo '<p class="price">' . $clothing['price'] . '</p>';
 
     }
 
-    echo "<h2>My stuff:<br>Name: " . $product['productname'] . "<br>Price: " . $proudct['price'] . '</h2>';
+    // echo "<h2>My stuff:<br>Name: " . $product['productname'] . "<br>Price: " . $proudct['price'] . '</h2>';
 
     ?>
-    <form action="">
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="name">Product Name</label>
       <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value=<?php echo $product['productname']; ?>>
     </div>
@@ -50,7 +73,7 @@
     <div class="form-group">
       <label for=""></label>
       <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
-    </div>
+    </div> -->
     </form>
 </body>
 </html>
