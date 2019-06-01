@@ -14,6 +14,9 @@
     <?php include 'connect.php';
     include 'header.php';
     $id = $_GET['id'];
+    $stmt = $db->prepare('DELETE FROM product WHERE productid=:id');
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
     ?>
 </body>
 </html>
