@@ -47,7 +47,7 @@
     $stmt->bindParam(':clothingsection', $clothingsection);
     $stmt->bindParam(':productid', $productid);
     $stmt->execute();
-     ?>
-     <h2 class="message">The product has been updated.</h2>
+    echo '<h2 class="message">The product has been updated!</h2>';
+    ?>
 </body>
 </html>

@@ -17,7 +17,7 @@
     $stmt = $db->prepare('DELETE FROM product WHERE productid=:id');
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
+    echo '<h2>The product has been removed!</h2>';
     ?>
-    <h2 class="message">Deleted!</h2>
 </body>
 </html>
