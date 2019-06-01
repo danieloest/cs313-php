@@ -30,5 +30,6 @@
     echo "<br>productid: " . $productid;
     echo "<br>clothingsection: " . $clothingsection;
      ?>
+     <h2></h2>
 </body>
 </html>
