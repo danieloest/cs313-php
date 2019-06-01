@@ -22,15 +22,6 @@
     $productid = $_GET['id'];
     $clothingsection = $_POST['clothingsection'];
 
-    echo "<br>Product name: " . $productname;
-    echo "<br>price: " . $price;
-    echo "<br>mainpicture: " . $mainpicture;
-    echo "<br>previewpicture: " . $previewpicture;
-    echo "<br>sidepicture: " . $sidepicture;
-    echo "<br>productid: " . $productid;
-    echo "<br>clothingsection: " . $clothingsection;
-
-    // $stmt  = $db->prepare("INSERT INTO product (productname, mainpicture, previewpicture, sidepicture, price, clothingsection) VALUES (:productname, :mainpicture, :previewpicture, :sidepicture, :price, :clothingsection);");
     $stmt  = $db->prepare("UPDATE product
     SET productname = :productname,
     mainpicture = :mainpicture,
