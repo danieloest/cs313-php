@@ -18,5 +18,6 @@
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     ?>
+    <h2 class="message">Deleted!</h2>
 </body>
 </html>
