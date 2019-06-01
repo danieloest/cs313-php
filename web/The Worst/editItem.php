@@ -25,7 +25,7 @@
         echo '
         <div class="form-group">
         <label for="name">Product Name</label>
-        <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value=<?php echo $product[\'productname\']; ?>>
+        <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value="' . $product['productname'] .  '">
       </div>
       <div class="form-group">
         <label for=""></label>
