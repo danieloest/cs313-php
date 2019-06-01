@@ -6,9 +6,15 @@ INSERT INTO colors (colorname) VALUES ('White');
 
 CREATE TABLE product (
     productID   serial     primary key,
-    productName     varchar(80)
+    productName     varchar(80),
+    mainPicture     text, -- the text is a url to the picture
+    previewPicture  text, -- the text is a url to the picture
+    sidePicture     text, -- the text is a url to the picture
+    price           float,
+    clothingSection int     references clothingSection(sectionID)
 );
-INSERT INTO product (productname) VALUES ('The Worst Shirt');
+-- INSERT INTO clothing clothingSection, price, mainPicture, previewPicture, sidePicture, clothingname, size, productid, color) VALUES (1, 19.99, 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/main.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/side.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/preview.JPG', 'The Worst Shirt', 1, 1, 1);
+INSERT INTO product (productname, mainPicture, previewPicture, sidePicture, price, clothingSection) VALUES ('The Worst Shirt', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/main.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/preview.JPG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/side.PNG', 19.99, 1);
 
 CREATE TABLE size (
     sizeID   serial     primary key,
@@ -31,17 +37,11 @@ CREATE TABLE clothing (
     clothingID      serial     primary key,
     available       BOOLEAN,
     quantityOnHand  int,
-    clothingSection int     references clothingSection(sectionID),
-    price           float,
-    mainPicture     text, -- the text is a url to the picture
-    previewPicture  text, -- the text is a url to the picture
-    sidePicture     text, -- the text is a url to the picture
-    clothingName            varchar(80),
     size            int     references size(sizeID),
     productID       int     references product(productID),
     color           int     references colors(colorID)
 );
-INSERT INTO clothing(available, quantityOnHand, clothingSection, price, mainPicture, previewPicture, sidePicture, clothingname, size, productid, color) VALUES (true, 5, 1, 19.99, 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/main.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/side.PNG', 'https://raw.githubusercontent.com/danieloest/cs313-php/master/web/The%20Worst/preview.JPG', 'The Worst Shirt', 1, 1, 1);
+INSERT INTO clothing(available, quantityOnHand, size, productid, color) VALUES (true, 5, 1, 1, 1);
 
 CREATE TABLE customer (
     customerID      serial     primary key,
@@ -70,7 +70,7 @@ CREATE TABLE purchasedItems(
 
 
 -- DROP TABLE colors;
--- DROP TABLE product;
+DROP TABLE product;
 -- DROP TABLE size;
 -- DROP TABLE clothingSection;
 -- DROP TABLE clothing;
@@ -78,11 +78,11 @@ CREATE TABLE purchasedItems(
 -- DROP TABLE purchase;
 -- DROP TABLE purchasedItems;
 
-select * from colors;
-select * from product;
-select * from size;
-select * from clothingSection;
-select * from clothing;
-select * from customer;
-select * from purchase;
-select * from purchasedItems;
+-- select * from colors;
+-- select * from product;
+-- select * from size;
+-- select * from clothingSection;
+-- select * from clothing;
+-- select * from customer;
+-- select * from purchase;
+-- select * from purchasedItems;
