@@ -37,13 +37,15 @@
     previewpicture = :previewpicture,
     sidepicture = :sidepicture,
     price = :price,
-    clothingsection = :clothingsection;");
+    clothingsection = :clothingsection
+    WHERE productid=:productid;");
     $stmt->bindParam(':productname', $productname);
     $stmt->bindParam(':mainpicture', $mainpicture);
     $stmt->bindParam(':previewpicture', $previewpicture);
     $stmt->bindParam(':sidepicture', $sidepicture);
     $stmt->bindParam(':price', $price);
     $stmt->bindParam(':clothingsection', $clothingsection);
+    $stmt->bindParam(':productid', $productid);
     $stmt->execute();
      ?>
      <h2>edited!</h2>
