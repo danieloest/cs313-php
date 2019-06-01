@@ -17,7 +17,7 @@
     include 'header.php';
     $id = $_GET['id'];
     $product;
-    $stmt = $db->prepare('SELECT productname, price, mainpicture, previewpicture, sidepicture, productid FROM product WHERE productid=:id');
+    $stmt = $db->prepare('SELECT productname, price, mainpicture, previewpicture, sidepicture, productid, clothingsection FROM product WHERE productid=:id');
     $stmt->execute(array(':id' => $id));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
@@ -45,7 +45,11 @@
           </div>';
           echo '<select>';
           foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
-            echo '<option value="' . $clothing['sectionid'] . '">'. $clothing['sectionname'] .'</option>';
+            echo '<option value="' . $clothing['sectionid'] . '"';
+            if ($clothing['sectionid'] == $product['clothingsection']) {
+                echo ' selected';
+            }
+            echo '>'. $clothing['sectionname'] .'</option>';
         }
         echo '</select>';
 
