@@ -25,25 +25,26 @@
         echo '
         <div class="form-group">
         <label for="name">Product Name</label>
-        <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value="' . $product['productname'] .  '">
+        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="" value="' . $product['productname'] .  '">
       </div>
       <div class="form-group">
         <label for="main">Main Picture</label>
-        <input type="text" class="form-control" name="main" id="" aria-describedby="helpId" placeholder="" value="'. $product['mainpicture'] .'">
+        <input type="text" class="form-control" name="main" id="main" aria-describedby="helpId" placeholder="" value="'. $product['mainpicture'] .'">
       </div>
       <div class="form-group">
         <label for="preview">Preview Picture</label>
-        <input type="text" class="form-control" name="preview" id="" aria-describedby="helpId" placeholder="" value="'. $product['previewpicture'] .'">
+        <input type="text" class="form-control" name="preview" id="preview" aria-describedby="helpId" placeholder="" value="'. $product['previewpicture'] .'">
       </div>
       <div class="form-group">
         <label for="side">Side Picture</label>
-        <input type="text" class="form-control" name="side" id="" aria-describedby="helpId" placeholder="" value="'. $product['sidepicture'] .'">
+        <input type="text" class="form-control" name="side" id="side" aria-describedby="helpId" placeholder="" value="'. $product['sidepicture'] .'">
       </div>
       <label for="price">Price</label>
             <input type="number"
-              class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '">
+              class="form-control" name="price" id="price" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '">
           </div>';
-          echo '<select>';
+          echo '<div class="form-group">
+          <label for="section"> <select class="class="form-control" name="section" id="section">';
           foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
             echo '<option value="' . $clothing['sectionid'] . '"';
             if ($clothing['sectionid'] == $product['clothingsection']) {
@@ -51,7 +52,7 @@
             }
             echo '>'. $clothing['sectionname'] .'</option>';
         }
-        echo '</select>';
+        echo '</select></div>';
 
     } ?>
     <input type="submit" value="Update Item">
