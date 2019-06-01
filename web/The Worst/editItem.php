@@ -41,7 +41,7 @@
       </div>
       <label for="price">Price</label>
             <input type="number"
-              class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '>
+              class="form-control" name="price" id="" aria-describedby="helpId" placeholder="" step="0.01" min=0 value="' . $product['price'] . '">
           </div>';
 
 
