@@ -14,7 +14,21 @@
     <?php
     include 'connect.php';
     include 'header.php';
-    
+    $productname = $_POST['productname'];
+    $price = $_POST['price'];
+    $mainpicture = $_POST['mainpicture'];
+    $previewpicture = $_POST['previewpicture'];
+    $sidepicture = $_POST['sidepicture'];
+    $productid = $_POST['productid'];
+    $clothingsection = $_POST['clothingsection'];
+
+    echo "<br>Product name: " . $productname;
+    echo "<br>price: " . $price;
+    echo "<br>mainpicture: " . $mainpicture;
+    echo "<br>previewpicture: " . $previewpicture;
+    echo "<br>sidepicture: " . $sidepicture;
+    echo "<br>productid: " . $productid;
+    echo "<br>clothingsection: " . $clothingsection;
      ?>
 </body>
 </html>
