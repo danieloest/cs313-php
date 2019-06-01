@@ -17,7 +17,7 @@
     include 'header.php';
     $id = $_GET['id'];
     $product;
-    $stmt = $db->prepare('SELECT productname, price, mainpicture, productid FROM product WHERE productid=:id');
+    $stmt = $db->prepare('SELECT productname, price, mainpicture, previewpicture, sidepicture, productid FROM product WHERE productid=:id');
     $stmt->execute(array(':id' => $id));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
@@ -28,8 +28,8 @@
         <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value="' . $product['productname'] .  '">
       </div>
       <div class="form-group">
-        <label for=""></label>
-        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+        <label for="main">Main Picture</label>
+        <input type="text" class="form-control" name="main" id="" aria-describedby="helpId" placeholder="" value="'. $product['mainpicture'] .'">
       </div>
       <div class="form-group">
         <label for=""></label>
