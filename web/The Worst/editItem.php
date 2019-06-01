@@ -15,10 +15,12 @@
     include 'connect.php';
     include 'header.php';
     $id = $_GET['id'];
+    $product;
     $stmt = $db->prepare('SELECT productname, price, mainpicture, productid FROM product WHERE productid=:id');
     $stmt->execute(array(':id' => $id));
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $clothing) {
+        $product = $clothing;
         echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
         echo '<img src="' . $clothing['mainpicture'] . '">';
         echo '<p class="price">' . $clothing['price'] . '</p>';
@@ -28,7 +30,7 @@
     <form action="">
     <div class="form-group">
       <label for="name">Product Name</label>
-      <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value=<?php echo >
+      <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="" value=<?php echo $product['productname']; ?>>
     </div>
     <div class="form-group">
       <label for=""></label>
