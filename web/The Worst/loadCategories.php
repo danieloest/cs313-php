@@ -6,7 +6,8 @@ $category = $_GET['category'];
 // echo "<br>!3";   
 
 $stmt - $db->prepare("SELECT productid, productname, previewpicture WHERE productid = :productid");
-$stmt->execute(array(':productid' => $category));
+// $stmt->execute(array(':productid' => $category));
+$stmt->bindValue(':productid', $category);
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $clothing) {
     echo '<div class="container"><a href=clothing.php?id=' . $clothing['productid'] . '>';
