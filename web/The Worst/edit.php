@@ -15,7 +15,7 @@
     include 'connect.php';
     include 'header.php';
     ?>
-    <select name="" id="selector" onchange="loadCategory()">
+    <select name="" id="selector" onchange="loadCategory()" class="selector">
         <?php
         foreach ($db->query('SELECT sectionname, sectionid  FROM clothingsection') as $clothing) {
             echo '<option value="' . $clothing['sectionid'] . '">'. $clothing['sectionname'] .'</option>';

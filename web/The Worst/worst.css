@@ -27,3 +27,8 @@
 .message {
     text-align: center;
 }
+
+.selector {
+    display: block;
+    margin: 0 auto;
+}
