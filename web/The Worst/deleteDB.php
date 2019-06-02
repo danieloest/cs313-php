@@ -14,8 +14,8 @@
     <?php include 'connect.php';
     include 'header.php';
     $id = $_GET['id'];
-    $stmt = $db->prepare('DELETE FROM product WHERE productid=:id;');
-    $stmt->bindValue(':productid', $id, PDO::PARAM_INT);
+    $stmt = $db->prepare('DELETE FROM product WHERE productid=:productid;');
+    $stmt->bindValue(':productid', $id);
     $stmt->execute();
     ?>
     <h2>The product has been removed!</h2>;
