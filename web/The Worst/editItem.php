@@ -55,9 +55,13 @@
         echo '</select></div>';
 
     } ?>
-    <input type="submit" value="Update Item" class="btn btn-info">
+    <div class="message">
+      <input type="submit" value="Update Item" class="btn btn-info">
+    </div>
     </form>
     <br>
-    <a href="deleteDB.php?id=<?php echo $id ?>" class="btn btn-danger" role="button">Delete</a>
+    <div style="margin: 0 auto; text-align: center">
+      <a href="deleteDB.php?id=<?php echo $id ?>" class="btn btn-danger" role="button">Delete</a>
+    </div>
 </body>
 </html>

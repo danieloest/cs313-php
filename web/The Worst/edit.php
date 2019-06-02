@@ -22,6 +22,7 @@
         }
         ?>
     </select>
+    <br><br>
     <div id="test"></div>
     <script>
     function loadCategory() {
