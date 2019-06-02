@@ -14,11 +14,13 @@
     <?php include 'connect.php';
     include 'header.php';
     $productid = $_GET['id'];
-    echo "ID: " . $productid;
+    $stmt = $db->prepare('DELETE FROM clothing WHERE productid=:productid;');
+    $stmt->bindValue(':productid', $productid);
+    $stmt->execute();
     $stmt = $db->prepare('DELETE FROM product WHERE productid=:productid;');
     $stmt->bindValue(':productid', $productid);
     $stmt->execute();
     ?>
-    <h2>The product has been removed!</h2>;
+    <h2 class="message">The product has been removed!</h2>;
 </body>
 </html>
