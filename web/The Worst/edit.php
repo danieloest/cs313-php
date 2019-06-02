@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>The Worst</title>
 </head>
-<body>
+<body onload="loadCategory()">
     <?php
     include 'connect.php';
     include 'header.php';

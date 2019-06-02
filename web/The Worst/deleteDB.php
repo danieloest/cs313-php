@@ -14,6 +14,7 @@
     <?php include 'connect.php';
     include 'header.php';
     $productid = $_GET['id'];
+
     $stmt = $db->prepare('DELETE FROM clothing WHERE productid=:productid;');
     $stmt->bindValue(':productid', $productid);
     $stmt->execute();
