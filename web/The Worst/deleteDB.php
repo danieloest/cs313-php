@@ -13,9 +13,10 @@
 <body>
     <?php include 'connect.php';
     include 'header.php';
-    $id = $_GET['id'];
+    $productid = $_GET['id'];
+    echo "ID: " . $productid;
     $stmt = $db->prepare('DELETE FROM product WHERE productid=:productid;');
-    $stmt->bindValue(':productid', $id);
+    $stmt->bindValue(':productid', $productid);
     $stmt->execute();
     ?>
     <h2>The product has been removed!</h2>;
