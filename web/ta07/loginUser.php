@@ -12,14 +12,14 @@ foreach ($rows as $clothing) {
     header('Content-Type: application/json');
     if ($rows['username'] == $username)
     {
-        $data = "Success";
+        $data = "{response: 'Success'}";
         echo json_encode($data);
         
     }
     
     else
     {
-        $data = "Incorrect username/password.";
+        $data = "{response: 'Incorrect username/password.'}";
         echo json_encode($data);
     }
 
