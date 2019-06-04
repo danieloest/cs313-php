@@ -9,21 +9,21 @@ $statement->bindValue(':password', $password);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
-$test = "{'response': '!!!!'}";
-echo json_encode($test);
-// foreach ($rows as $row) {
-//     if ($row['username'] == $username)
-//     {
-//         $data = "{'response': 'Success'}";
-//         echo json_encode($data);
+// $test = "{'response': '!!!!'}";
+// echo json_encode($test);
+foreach ($rows as $row) {
+    if ($row['username'] == $username)
+    {
+        $data = "{'response': 'Success'}";
+        echo json_encode($data);
         
-//     }
+    }
     
-//     else
-//     {
-//         $data = "{'response': 'Incorrect username/password.'}";
-//         echo json_encode($data);
-//     }
+    else
+    {
+        $data = "{'response': 'Incorrect username/password.'}";
+        echo json_encode($data);
+    }
 
-// }
+}
 ?>
