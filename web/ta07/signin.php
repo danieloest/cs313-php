@@ -27,7 +27,7 @@
                 console.log(this.responseText);
             }
         };
-        xhttp.open("GET", "loadCategories.php?category=" + value, true);
+        xhttp.open("GET", "loginUser.php", true);
         xhttp.send(parameters);
     }
     </script>
