@@ -9,15 +9,18 @@ $statement->bindValue(':password', $password);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $clothing) {
-    // echo $rows['username'] . '<br>';
+    header('Content-Type: application/json');
     if ($rows['username'] == $username)
     {
-        echo "Logged in!";
+        $data = "Success";
+        echo json_encode($data);
+        
     }
-
+    
     else
     {
-        echo "Incorrect username/password.";
+        $data = "Incorrect username/password.";
+        echo json_encode($data);
     }
 
 }
