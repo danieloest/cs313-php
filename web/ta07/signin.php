@@ -27,7 +27,10 @@
                 console.log("original response: " + this.responseText);
                 var response = JSON.parse(this.responseText);
                 console.log("\nParsed: " + response);
-                // Handle if success or not
+                // TODO: Handle if success or not
+            }
+            else {
+                console.log("this.status: " + this.status);
             }
         };
         xhttp.open("POST", "loginUser.php", true);
