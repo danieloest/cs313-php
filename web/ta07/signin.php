@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="addUser.php" method="POST">
+    <form action="loginUser.php" method="POST">
     <label for="username">User Name</label>
     <input type="text" name="username" id="">
     <br>
