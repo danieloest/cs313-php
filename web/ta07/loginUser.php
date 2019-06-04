@@ -2,7 +2,8 @@
 include 'connect.php';
 $username = $_POST['username'];
 $pass = password_verify($_POST['password'], PASSWORD_DEFAULT);
-$query = 'SELECT username FROM usersTeam WHERE username=:username AND pass=:pass;';
+// $query = 'SELECT username FROM usersTeam WHERE username=:username AND pass=:pass;';
+$query = ' SELECT username FROM usersteam WHERE username=:username AND pass=:pass;
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 $statement->bindValue(':pass', $pass);
