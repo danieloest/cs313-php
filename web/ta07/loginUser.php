@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'connect.php';
 $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $query = 'SELECT username FROM usersTeam(username, password) WHERE username=:username AND password=:password';
