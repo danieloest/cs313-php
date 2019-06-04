@@ -30,7 +30,6 @@
         xhttp.open("GET", "loadCategories.php?category=" + value, true);
         xhttp.send(parameters);
     }
-    }
     </script>
 </body>
 </html>
