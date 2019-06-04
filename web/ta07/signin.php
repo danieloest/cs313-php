@@ -27,7 +27,7 @@
                 console.log(this.responseText);
             }
         };
-        xhttp.open("GET", "loginUser.php", true);
+        xhttp.open("POST", "loginUser.php", true);
         xhttp.send(parameters);
     }
     </script>
