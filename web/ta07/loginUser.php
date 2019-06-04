@@ -1,11 +1,11 @@
 <?php
 include 'connect.php';
 $username = $_POST['username'];
-$password = password_verify($_POST['password'], PASSWORD_DEFAULT);
-$query = 'SELECT username FROM usersTeam WHERE username=:username AND pass=:password;';
+$pass = password_verify($_POST['password'], PASSWORD_DEFAULT);
+$query = 'SELECT username FROM usersTeam WHERE username=:username AND pass=:pass;';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
-$statement->bindValue(':password', $password);
+$statement->bindValue(':pass', $pass);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
