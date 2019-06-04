@@ -9,10 +9,10 @@ $statement->bindValue(':password', $password);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
-$test = "{'response': '!!!!'}";
-echo json_encode($test);
-/*foreach ($rows as $clothing) {
-    if ($rows['username'] == $username)
+// $test = "{'response': '!!!!'}";
+// echo json_encode($test);
+foreach ($rows as $row) {
+    if ($row['username'] == $username)
     {
         $data = "{response: 'Success'}";
         echo json_encode($data);
@@ -25,5 +25,5 @@ echo json_encode($test);
         echo json_encode($data);
     }
 
-}*/
+}
 ?>
