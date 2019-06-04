@@ -9,7 +9,16 @@ $statement->bindValue(':password', $password);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $clothing) {
-    echo $rows . '<br>';
+    // echo $rows['username'] . '<br>';
+    if ($rows['username'] == $username)
+    {
+        echo "header('Location: home.php')";
+    }
+
+    else
+    {
+        echo "Incorrect username/password.";
+    }
 
 }
 ?>
