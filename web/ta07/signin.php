@@ -31,7 +31,6 @@
             }
         };
         xhttp.open("POST", "loginUser.php", true);
-        xhttp.send(parameters);
     }
     </script>
 </body>

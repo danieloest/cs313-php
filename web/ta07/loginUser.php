@@ -6,7 +6,6 @@ $username = $_POST['username'];
 $query = ' SELECT username, pass FROM usersteam WHERE username=:username';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
-$statement->bindValue(':pass', $pass);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
