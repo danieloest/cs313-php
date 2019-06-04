@@ -12,7 +12,7 @@ foreach ($rows as $clothing) {
     // echo $rows['username'] . '<br>';
     if ($rows['username'] == $username)
     {
-        echo "header('Location: home.php')";
+        echo "Logged in!";
     }
 
     else
