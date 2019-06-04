@@ -14,14 +14,14 @@ header('Content-Type: application/json');
 foreach ($rows as $row) {
     if ($row['username'] == $username)
     {
-        $data = "{response: 'Success'}";
+        $data = "{'response': 'Success'}";
         echo json_encode($data);
         
     }
     
     else
     {
-        $data = "{response: 'Incorrect username/password.'}";
+        $data = "{'response': 'Incorrect username/password.'}";
         echo json_encode($data);
     }
 
