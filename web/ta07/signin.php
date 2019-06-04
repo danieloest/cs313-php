@@ -24,7 +24,7 @@
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                console.log("original response: " + this.resposneText);
+                console.log("original response: " + this.responseText);
                 var response = JSON.parse(this.responseText);
                 console.log("\nParsed: " + response);
                 // Handle if success or not
