@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="">
+    <form action="#" method="" onsubmit="return false">
     <label for="username">User Name</label>
     <input type="text" name="username" id="username">
     <br>
