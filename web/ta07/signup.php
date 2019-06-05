@@ -37,7 +37,7 @@
     <input type="password" name="passwordConfirm" id="passwordConfirm">
     <!-- <input type="submit" value="Sign Up"> -->
     <!-- For stretch 3 -->
-    <button onclick="signup()">Sign in</button>
+    <button onclick="signUp()">Sign Up</button>
     </form>
     <p class="error">
     <?php
