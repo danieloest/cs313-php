@@ -4,13 +4,13 @@ $username = $_POST['username'];
 // $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $pass = $_POST['password'];
 
-$query = 'SELECT username, pass FROM usersteam WHERE username=:username';
 $statement = $db->prepare('SELECT username, pass FROM usersteam WHERE username=:username;');
 $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
 $data = "outside foreach";
+$data = "username: " . $username . "      Password: " . $pass;
 foreach ($rows as $row) {
     $data = "inside for each";
     if (password_verify($pass, $row['pass']))
@@ -22,6 +22,6 @@ foreach ($rows as $row) {
         $data = "{'response': 'Incorrect username/password.'}";
     }   
 }
-echo json_encode($rows);
+echo json_encode($data);
 
 ?>
