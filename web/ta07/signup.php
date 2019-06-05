@@ -14,7 +14,7 @@
     <br>
     <p class="error">
     <?php 
-    if ($_GET["error"] == 1)
+    if ($_GET["error"] == 1 || $_GET["error"] == 2)
     {
         echo "*";
     }
@@ -25,7 +25,7 @@
     <br>
     <p class="error">
     <?php
-    if ($_GET["error"] == 1)
+    if ($_GET["error"] == 1 || $_GET["error"] == 2)
     {
         echo "*";
     }
@@ -40,6 +40,10 @@
     if ($_GET["error"] == 1)
     {
         echo "Passwords did not match";
+    }
+    if ($_GET["error"] == 2)
+    {
+        echo "Password must contain at least 7 charactes and a number";
     }
     ?>
     </p>

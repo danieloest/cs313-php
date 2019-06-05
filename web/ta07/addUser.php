@@ -8,6 +8,11 @@ if ($pass != $passConfirm)
     header('Location: signup.php?error=1');
     die();
 }
+if (strlen($pass) < 7 && preg_match('/\\d/', $String) > 0)
+{
+    eader('Location: signup.php?error=2');
+    die();
+}
 else 
 {
     $query = 'INSERT into usersTeam(username, pass) VALUES (:username, :pass)';
