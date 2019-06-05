@@ -8,9 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="addUser.php" method="POST">
+    <!-- <form action="addUser.php" method="POST"> -->
+        <!-- For stretch 3 -->
+    <form action="#" method="" onsubmit="return false">
     <label for="username">User Name</label>
-    <input type="text" name="username" id="">
+    <input type="text" name="username" id="username">
     <br>
     <p class="error">
     <?php 
@@ -21,7 +23,7 @@
     ?>
      </p>
     <label for="password">Password</label>
-    <input type="password" name="password" id="">
+    <input type="password" name="password" id="password">
     <br>
     <p class="error">
     <?php
@@ -32,8 +34,10 @@
     ?>
     </p>
     <label for="passwordConfirm">Confirm Password</label>
-    <input type="password" name="passwordConfirm" id="">
-    <input type="submit" value="Sign Up">
+    <input type="password" name="passwordConfirm" id="passwordConfirm">
+    <!-- <input type="submit" value="Sign Up"> -->
+    <!-- For stretch 3 -->
+    <button onclick="signup()">Sign in</button>
     </form>
     <p class="error">
     <?php
@@ -47,7 +51,16 @@
     }
     ?>
     </p>
-    <a href="signup.php"><p>Already a member? Sign in here</p></a>
-
+    <a href="signin.php"><p>Already a member? Sign in here</p></a>
+    <script>
+        function signUp() {
+            var username = document.getElementById("username").value;
+            var password document.getElementById("password").value;
+            var passwordConfirm document.getElementById("passwordConfirm").value;
+            console.log("\nUsername: " + username);
+            console.log("\nPassword: " + password);
+            console.log("\nPassword Confirm: " + passwordConfirm);
+        }
+    </script>
 </body>
 </html>
