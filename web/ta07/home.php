@@ -1,5 +1,10 @@
 <?php 
 session_start();
+if (!isset($_SESSION["username"]))
+{
+    header('Location: signin.php');
+    die();
+}
 $username = $_SESSION["username"];
 ?>
 <!DOCTYPE html>
