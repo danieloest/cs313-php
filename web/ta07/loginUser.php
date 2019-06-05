@@ -11,6 +11,7 @@ $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
 $data = "outside foreach";
+$data = '$rows["username"]: ' . $rows['username'];
 foreach ($rows as $row) {
     $data = "inside for each";
     if (password_verify($pass, $row['pass']))
