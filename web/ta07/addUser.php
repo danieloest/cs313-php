@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'connect.php';
 $username = $_POST['username'];
 $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -9,7 +10,7 @@ if ($passOriginal != $passConfirm)
     header('Location: signup.php?error=1');
     die();
 }
-if (strlen($pass) < 7 && preg_match('/\\d/', $String) > 0)
+if (strlen($pass) < 7 /*&& preg_match('/\\d/', $String) > 0*/)
 {
     eader('Location: signup.php?error=2');
     die();
@@ -21,5 +22,7 @@ else
     $statement->bindValue(':username', $username);
     $statement->bindValue(':pass', $pass);
     $statement->execute();
+    $_SESSION["username"] = $username;
+    header('Location: home.php');
 }
 ?>
