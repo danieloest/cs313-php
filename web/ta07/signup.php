@@ -68,6 +68,13 @@
                 }
                 document.getElementById("errorMessage").innerHTML = "Passwords did not match";
             }
+            else if (/\d/.test(password) == false && pass.length < 7) {
+                var error = document.getElementsByClassName("error");
+                for (var i = 0; i < error.length; i++) {
+                    error[i].innerHTML = "*";
+                }
+                document.getElementById("errorMessage").innerHTML = "Password must contain at least 7 charactes and a number";
+            }
         }
     </script>
 </body>
