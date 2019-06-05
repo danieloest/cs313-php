@@ -11,13 +11,27 @@
     <label for="username">User Name</label>
     <input type="text" name="username" id="">
     <br>
-    <p class="error"><?php if ($_GET["error" == 1]) echo "*"; ?></p>
+    <p class="error">
+    <?php 
+    if ($_GET["error"] == 1)
+    {
+        echo "*";
+    }
+    ?>
+     </p>
     <label for="password">Password</label>
     <input type="password" name="password" id="">
     <br>
-    <p class="error"><?php if ($_GET["error" == 1]) echo "*"; ?></p>
+    <p class="error">
+    <?php
+    if ($_GET["error"] == 1)
+    {
+        echo "*";
+    }
+    ?>
+    </p>
     <label for="passwordConfirm">Confirm Password</label>
-    <input type="paassword" name="passwordConfirm" id="">
+    <input type="password" name="passwordConfirm" id="">
     <input type="submit" value="Sign Up">
     </form>
     <a href="signup.php"><p>Already a member? Sign in here</p></a>
