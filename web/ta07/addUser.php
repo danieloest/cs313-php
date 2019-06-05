@@ -10,9 +10,9 @@ if ($passOriginal != $passConfirm)
     header('Location: signup.php?error=1');
     die();
 }
-if (strlen($pass) < 7 /*&& preg_match('/\\d/', $String) > 0*/)
+else if (strlen($pass) < 7 /*&& preg_match('/\\d/', $String) > 0*/)
 {
-    eader('Location: signup.php?error=2');
+    header('Location: signup.php?error=2');
     die();
 }
 else 
