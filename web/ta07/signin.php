@@ -26,6 +26,14 @@
             if (this.readyState == 4 && this.status == 200) {
                 console.log("original response: " + this.responseText);
                 var response = JSON.parse(this.responseText);
+                if (response['response'] == "Success")
+                {
+                    console.log("Correct stuff!");
+                }
+                else
+                {
+                    console.log("Bruh... no");
+                }
                 console.log("\nParsed: " + response);
                 // TODO: Handle if success or not
             }
@@ -35,8 +43,8 @@
             }
         };
         xhttp.open("POST", "loginUser.php", true);
+        // Needs the line below in order to send parameters. This specifies that it is sending data to be used.
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        // Not sending parameters correctly?
         xhttp.send(parameters);
     }
     </script>
