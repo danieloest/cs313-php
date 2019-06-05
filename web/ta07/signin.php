@@ -16,6 +16,7 @@
     <!-- <input type="submit" value="Sign Up"> -->
     <button onclick="login()">Sign in</button>
     </form>
+    <p id="messageBox"></p>
     <script>
     function login() {
         var username = document.getElementById('username').value;
@@ -33,13 +34,9 @@
                 else
                 {
                     console.log("Bruh... no");
+                    document.getElementById('messageBox').innerHTML = response;
                 }
                 console.log("\nParsed: " + response);
-                // TODO: Handle if success or not
-            }
-            else {
-                console.log("this.status: " + this.status);
-                console.log("\nthis readyState: " + this.readyState);
             }
         };
         xhttp.open("POST", "loginUser.php", true);
