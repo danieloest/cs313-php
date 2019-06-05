@@ -5,7 +5,7 @@ $username = $_POST['username'];
 $pass = $_POST['password'];
 
 $query = 'SELECT username, pass FROM usersteam WHERE username=:username';
-$statement = $db->prepare('SELECT username, pass FROM usersteam WHERE username=:username');
+$statement = $db->prepare('SELECT username, pass FROM usersteam WHERE username=:username;');
 $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
