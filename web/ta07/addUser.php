@@ -2,8 +2,9 @@
 include 'connect.php';
 $username = $_POST['username'];
 $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-$passConfirm = password_hash($_POST['passwordConfirm'], PASSWORD_DEFAULT);
-if ($pass != $passConfirm)
+$passConfirm = $_POST['passwordConfirm'];
+$passOriginal = $_POST['password'];
+if ($passOriginal != $passConfirm)
 {
     header('Location: signup.php?error=1');
     die();
