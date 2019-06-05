@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <form action="addUser.php" method="POST"> -->
+    <form onsubmit="return signUp()" action="addUser.php" method="POST">
         <!-- For stretch 3 -->
-    <form action="#" method="" onsubmit="return false">
+    <!-- <form action="#" method="" onsubmit="return false"> -->
     <label for="username">User Name</label>
     <input type="text" name="username" id="username">
     <br>
@@ -67,13 +67,19 @@
                     error[i].innerHTML = "*";
                 }
                 document.getElementById("errorMessage").innerHTML = "Passwords did not match";
+                return false;
             }
+            // Confirm password has a number and is longer than 7 characters
             else if (/\d/.test(password) == false || password.length < 7) {
                 var error = document.getElementsByClassName("error");
                 for (var i = 0; i < error.length; i++) {
                     error[i].innerHTML = "*";
                 }
                 document.getElementById("errorMessage").innerHTML = "Password must contain at least 7 charactes and a number";
+                return false;
+            }
+            else {
+                return true;
             }
         }
     </script>
