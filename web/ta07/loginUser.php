@@ -20,10 +20,8 @@ foreach ($rows as $row) {
     else
     {
         $data = "{'response': 'Incorrect username/password.'}";
-    }
-    echo json_encode($data);
-  
-
+    }   
 }
+echo json_encode($data);
 
 ?>
