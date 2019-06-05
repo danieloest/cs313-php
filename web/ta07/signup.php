@@ -35,6 +35,14 @@
     <input type="password" name="passwordConfirm" id="">
     <input type="submit" value="Sign Up">
     </form>
+    <p class="error">
+    <?php
+    if ($_GET["error"] == 1)
+    {
+        echo "Passwords did not match";
+    }
+    ?>
+    </p>
     <a href="signup.php"><p>Already a member? Sign in here</p></a>
 
 </body>
