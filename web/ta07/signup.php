@@ -11,7 +11,7 @@
     <label for="username">User Name</label>
     <input type="text" name="username" id="">
     <br>
-    <div class="flex-container"></div>
+    <div class="flex-container">
     <p class="error">
     <?php 
     if ($_GET["error"] == 1)
