@@ -15,5 +15,7 @@
     <input type="password" name="password" id="">
     <input type="submit" value="Sign Up">
     </form>
+    <a href="signup.php"><p>Already a member? Sign in here</p></a>
+
 </body>
 </html>

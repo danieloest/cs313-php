@@ -31,7 +31,6 @@
                 var response = JSON.parse(this.responseText);
                 if (response == "Success")
                 {
-                    $_SESSION["username"] = $username;
                     window.location = "home.php";
                 }
                 else

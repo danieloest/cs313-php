@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'connect.php';
 $username = $_POST['username'];
 // $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -12,6 +13,7 @@ header('Content-Type: application/json');
 foreach ($rows as $row) {
     if (password_verify($pass, $row['pass']))
     {
+        $_SESSION["username"] = $username;
         $data = "Success";
     }
     else
