@@ -55,8 +55,8 @@
     <script>
         function signUp() {
             var username = document.getElementById("username").value;
-            var password document.getElementById("password").value;
-            var passwordConfirm document.getElementById("passwordConfirm").value;
+            var password = document.getElementById("password").value;
+            var passwordConfirm = document.getElementById("passwordConfirm").value;
             console.log("\nUsername: " + username);
             console.log("\nPassword: " + password);
             console.log("\nPassword Confirm: " + passwordConfirm);
