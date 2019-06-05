@@ -39,7 +39,7 @@
     <!-- For stretch 3 -->
     <button onclick="signUp()">Sign Up</button>
     </form>
-    <p class="error">
+    <p id="errorMessage">
     <?php
     if ($_GET["error"] == 1)
     {
@@ -60,6 +60,14 @@
             console.log("\nUsername: " + username);
             console.log("\nPassword: " + password);
             console.log("\nPassword Confirm: " + passwordConfirm);
+            // Confirm passwords are the same
+            if (password != passwordConfirm) {
+                var error = document.getElementsByClassName("error");
+                for (var i = 0; i < error.length; i++) {
+                    error[i].innerHTML = "*";
+                }
+                document.getElementById("errorMessage").innerHTML = "Passwords did not match";
+            }
         }
     </script>
 </body>

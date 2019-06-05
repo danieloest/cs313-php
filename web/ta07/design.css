@@ -3,7 +3,7 @@
     font-size: 1.2em;
 }
 
-.error {
+.error, #errorMessage {
     color: red;
     display: inline-block;
 }
