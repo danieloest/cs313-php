@@ -20,7 +20,7 @@
     function login() {
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        var parameters = '&username="' + username + '"&password="' + password + '"';
+        var parameters = 'username=' + username + '&password=' + password;
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -35,6 +35,7 @@
             }
         };
         xhttp.open("POST", "loginUser.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         // Not sending parameters correctly?
         xhttp.send(parameters);
     }
