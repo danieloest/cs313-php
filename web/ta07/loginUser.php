@@ -12,11 +12,11 @@ header('Content-Type: application/json');
 foreach ($rows as $row) {
     if (password_verify($pass, $row['pass']))
     {
-        $data = "{'response': 'Success'}";
+        $data = "Success";
     }
     else
     {
-        $data = "{'response': 'Incorrect username/password.'}";
+        $data = "Incorrect username/password";
     }   
 }
 echo json_encode($data);

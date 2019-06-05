@@ -26,7 +26,7 @@
             if (this.readyState == 4 && this.status == 200) {
                 console.log("original response: " + this.responseText);
                 var response = JSON.parse(this.responseText);
-                if (response['response'] == "Success")
+                if (response == "Success")
                 {
                     console.log("Correct stuff!");
                 }
