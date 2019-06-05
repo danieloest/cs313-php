@@ -11,6 +11,7 @@
     <label for="username">User Name</label>
     <input type="text" name="username" id="">
     <br>
+    <div class="flex-container"></div>
     <p class="error">
     <?php 
     if ($_GET["error"] == 1)
@@ -21,7 +22,9 @@
      </p>
     <label for="password">Password</label>
     <input type="password" name="password" id="">
+    </div>
     <br>
+    <div class="flex-container">
     <p class="error">
     <?php
     if ($_GET["error"] == 1)
@@ -32,6 +35,7 @@
     </p>
     <label for="passwordConfirm">Confirm Password</label>
     <input type="password" name="passwordConfirm" id="">
+    </div>
     <input type="submit" value="Sign Up">
     </form>
     <a href="signup.php"><p>Already a member? Sign in here</p></a>
