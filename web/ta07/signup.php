@@ -9,8 +9,6 @@
 </head>
 <body>
     <form onsubmit="return signUp()" action="addUser.php" method="POST">
-        <!-- For stretch 3 -->
-    <!-- <form action="#" method="" onsubmit="return false"> -->
     <label for="username">User Name</label>
     <input type="text" name="username" id="username">
     <br>
@@ -35,8 +33,6 @@
     </p>
     <label for="passwordConfirm">Confirm Password</label>
     <input type="password" name="passwordConfirm" id="passwordConfirm">
-    <!-- <input type="submit" value="Sign Up"> -->
-    <!-- For stretch 3 -->
     <button onclick="signUp()">Sign Up</button>
     </form>
     <p id="errorMessage">
@@ -57,9 +53,6 @@
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             var passwordConfirm = document.getElementById("passwordConfirm").value;
-            console.log("\nUsername: " + username);
-            console.log("\nPassword: " + password);
-            console.log("\nPassword Confirm: " + passwordConfirm);
             // Confirm passwords are the same
             if (password != passwordConfirm) {
                 var error = document.getElementsByClassName("error");
