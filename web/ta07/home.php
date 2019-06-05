@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php
+    include 'connect.php';
+    $username = $_GET['username'];
+    echo "<h2>Welcome, $username!</h2>";
+    ?>
 </body>
 </html>

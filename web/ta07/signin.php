@@ -30,11 +30,11 @@
                 var response = JSON.parse(this.responseText);
                 if (response == "Success")
                 {
-                    console.log("Correct stuff!");
+                    window.location("home.php?username=" + username);
                 }
                 else
                 {
-                    console.log("Bruh... no");
+
                     document.getElementById('messageBox').innerHTML = response;
                 }
                 console.log("\nParsed: " + response);
