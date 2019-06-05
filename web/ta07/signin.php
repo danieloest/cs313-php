@@ -30,7 +30,7 @@
                 var response = JSON.parse(this.responseText);
                 if (response == "Success")
                 {
-                    window.location("home.php?username=" + username);
+                    window.location = "home.php?username=" + username;
                 }
                 else
                 {
