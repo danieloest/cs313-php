@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +15,10 @@
     <br>
     <label for="password">Password</label>
     <input type="password" name="password" id="password">
-    <!-- <input type="submit" value="Sign Up"> -->
     <button onclick="login()">Sign in</button>
     </form>
     <p id="messageBox"></p>
+    <a href="signup.php"><p>Not a member? Sign up here</p></a>
     <script>
     function login() {
         var username = document.getElementById('username').value;
@@ -30,7 +31,8 @@
                 var response = JSON.parse(this.responseText);
                 if (response == "Success")
                 {
-                    window.location = "home.php?username=" + username;
+                    $_SESSION["username"] = $username;
+                    window.location = "home.php";
                 }
                 else
                 {

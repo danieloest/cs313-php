@@ -1,3 +1,7 @@
+<?php 
+session_start();
+$username = $_SESSION["username"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,6 @@
 <body>
     <?php
     include 'connect.php';
-    $username = $_GET['username'];
     echo "<h2>Welcome, $username!</h2>";
     ?>
 </body>
