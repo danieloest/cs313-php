@@ -31,6 +31,7 @@
             }
             else {
                 console.log("this.status: " + this.status);
+                console.log("\nthis readyState: " + this.readyState);
             }
         };
         xhttp.open("POST", "loginUser.php", true);
