@@ -10,7 +10,9 @@ $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
+$data = "outside foreach";
 foreach ($rows as $row) {
+    $data = "inside for each";
     if (password_verify($pass, $row['pass']))
     {
         $data = "{'response': 'Success'}";
