@@ -17,7 +17,7 @@ else if (strlen($passOriginal) < 7 || !preg_match('~[0-9]~', $passOriginal))
 }
 else 
 {
-    $query = 'INSERT into usersTeam(username, pass) VALUES (:username, :pass, false)';
+    $query = 'INSERT into worstusers(username, pass, isadmin) VALUES (:username, :pass, false)';
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
     $statement->bindValue(':pass', $pass);
