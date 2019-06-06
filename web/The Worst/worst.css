@@ -32,3 +32,8 @@
     display: block;
     margin: 0 auto;
 }
+
+.error, #errorMessage {
+    color: red;
+    display: inline-block;
+}
