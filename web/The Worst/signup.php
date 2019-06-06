@@ -26,6 +26,36 @@
           <label for="passwordConfirm">Confirm Your Password</label>
           <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" aria-describedby="helpId" placeholder="">
         </div>
+        <button onclick="signUp()">Sign Up</button>
     </form>
+    <a href="signin.php"><p>Already registered? Sign in here</p></a>
+    <script>
+        function signUp() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var passwordConfirm = document.getElementById("passwordConfirm").value;
+            // Confirm passwords are the same
+            if (password != passwordConfirm) {
+                var error = document.getElementsByClassName("error");
+                for (var i = 0; i < error.length; i++) {
+                    error[i].innerHTML = "*";
+                }
+                document.getElementById("errorMessage").innerHTML = "Passwords did not match";
+                return false;
+            }
+            // Confirm password has a number and is longer than 7 characters
+            else if (/\d/.test(password) == false || password.length < 7) {
+                var error = document.getElementsByClassName("error");
+                for (var i = 0; i < error.length; i++) {
+                    error[i].innerHTML = "*";
+                }
+                document.getElementById("errorMessage").innerHTML = "Password must contain at least 7 charactes and a number";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
 </body>
 </html>
