@@ -19,15 +19,18 @@
           <input type="text" class="form-control" name="username" id="username" aria-describedby="helpId" placeholder="">
         </div>
         <div class="form-group">
+          <p class="error">
           <label for="password">Password</label>
           <input type="password" class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="">
         </div>
         <div class="form-group">
+          <p class="error">
           <label for="passwordConfirm">Confirm Your Password</label>
           <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" aria-describedby="helpId" placeholder="">
         </div>
         <button onclick="signUp()">Sign Up</button>
     </form>
+    <p id="errorMessage">
     <a href="signin.php"><p>Already registered? Sign in here</p></a>
     <script>
         function signUp() {
