@@ -13,7 +13,7 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
-    <form onsubmit="return signUp()" action="" method="post">
+    <form onsubmit="return signUp()" action="addUser.php" method="POST">
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" class="form-control" name="username" id="username" aria-describedby="helpId" placeholder="">
