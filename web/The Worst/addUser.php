@@ -21,7 +21,6 @@ else
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
     $statement->bindValue(':pass', $pass);
-    $statement->bindValue('false', false);
     $statement->execute();
     $_SESSION["username"] = $username;
     header('Location: home.php');
