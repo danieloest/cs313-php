@@ -13,5 +13,19 @@
 <body>
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
+    <form onsubmit="return signUp()" action="" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" name="username" id="username" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="">
+        </div>
+        <div class="form-group">
+          <label for="passwordConfirm">Confirm Your Password</label>
+          <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" aria-describedby="helpId" placeholder="">
+        </div>
+    </form>
 </body>
 </html>
