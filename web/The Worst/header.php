@@ -25,6 +25,8 @@
                                         <li><a href="edit.php">Edit Product</a></li>
                                 </ul>
                         </li>
+                        <li><a href="login.php">Log In</a></li>
+                        <li><a href="signup.php">Sign Up</a></li>
                 </ul>
         </div>
 </div>
