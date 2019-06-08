@@ -5,7 +5,7 @@ $username = $_POST['username'];
 // $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $pass = $_POST['password'];
 
-$statement = $db->prepare('SELECT username, pass FROM usersteam WHERE username=:username;');
+$statement = $db->prepare('SELECT username, pass FROM worstusers WHERE username=:username;');
 $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
