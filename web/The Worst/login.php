@@ -28,6 +28,7 @@
     </div>
     </form>
     <div class="center">
+        <br>
         <p id="errorMessage"></p>
         <a href="signup.php"><p>Not a member? Sign up here</p></a>
     </div>
