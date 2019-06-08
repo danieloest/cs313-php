@@ -1,6 +1,7 @@
 .title {
     text-align: center;
     font-size: 4em;
+    color: #171D1C !important;
 }
 
 .menu-flex {
@@ -40,4 +41,11 @@
 
 .center {
     text-align: center;
+}
+
+.welcome {
+    text-align: right;
+    font-size: 1.3em;
+    padding-right: 1em;
+    color: #171D1C;
 }
