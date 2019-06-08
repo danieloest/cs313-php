@@ -20,8 +20,8 @@
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $clothing) {
             echo '<h1 class="title">' . $clothing['productname'] . '</h1>';
-            echo '<img src="' . $clothing['mainpicture'] . '">';
-            echo '<p class="price">' . $clothing['price'] . '</p>';
+            echo '<img class="img-center" src="' . $clothing['mainpicture'] . '">';
+            echo '<p class="price center">' . $clothing['price'] . '</p>';
     
         }
     ?>

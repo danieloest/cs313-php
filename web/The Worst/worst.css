@@ -49,3 +49,9 @@
     padding-right: 1em;
     color: #171D1C;
 }
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
