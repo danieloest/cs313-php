@@ -27,14 +27,14 @@
                         </li>
                         <?php
                         // Only show if a user is logged in
-                        if (!isset($_SESSION["username"]))
+                        if (isset($_SESSION["username"]) && $_SESSION["username"] != "")
                         {
-                                echo '<li><a href="login.php">Log In</a></li>
-                                <li><a href="signup.php">Sign Up</a></li>';
-
+                                echo '<li><a href="logout.php">Log Out</a></li>';
+                                
                         }
                         else {
-                                echo '<li><a href="logout.php">Log Out</a></li>';
+                                echo '<li><a href="login.php">Log In</a></li>
+                                <li><a href="signup.php">Sign Up</a></li>';
 
                         }
                         ?>
