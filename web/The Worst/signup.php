@@ -34,7 +34,7 @@
     </form>
     <div class="center">
         <p id="errorMessage">
-        <a href="signin.php"><p>Already registered? Sign in here</p></a>
+        <a href="login.php"><p>Already registered? Sign in here</p></a>
     </div>
     <script>
         function signUp() {
