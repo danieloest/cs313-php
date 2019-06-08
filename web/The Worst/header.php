@@ -25,8 +25,19 @@
                                         <li><a href="edit.php">Edit Product</a></li>
                                 </ul>
                         </li>
-                        <li><a href="login.php">Log In</a></li>
-                        <li><a href="signup.php">Sign Up</a></li>
+                        <?php
+                        // Only show if a user is logged in
+                        if (!isset($_SESSION["username"]))
+                        {
+                                echo '<li><a href="login.php">Log In</a></li>
+                                <li><a href="signup.php">Sign Up</a></li>';
+
+                        }
+                        else {
+                                echo '<li><a href="logout.php">Log Out</a></li>';
+
+                        }
+                        ?>
                 </ul>
         </div>
 </div>
