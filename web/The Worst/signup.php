@@ -29,7 +29,7 @@
           <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" aria-describedby="helpId" placeholder="">
         </div>
         <div class="center">
-            <input type="submit" value="Sign Up">
+            <input type="submit" value="Sign Up" class="btn btn-primary">
         </div>
     </form>
     <div class="center">
