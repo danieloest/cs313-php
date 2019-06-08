@@ -41,5 +41,14 @@
                         ?>
                 </ul>
         </div>
+        <div class="welcome">
+        <?php
+        if (isset($_SESSION["username"]) && $_SESSION["username"] != "")
+        {
+                echo '<p class="welcomeMessage">Welcome, ' . $_SESSION["username"] . '.</p>';
+                
+        }
+        ?>
+        </div>
 </div>
 
