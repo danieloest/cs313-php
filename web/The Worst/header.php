@@ -23,7 +23,7 @@
                         if (isset($_SESSION["username"]) && $_SESSION["username"] != "")
                         {
                                 $statement = $db->prepare('SELECT isadmin FROM usersteam WHERE username=:username;');
-                                $statement->bindValue(':username', $username);
+                                $statement->bindValue(':username', $_SESSION["username"]);
                                 $statement->execute();
                                 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($rows as $row) {
