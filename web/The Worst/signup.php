@@ -28,9 +28,13 @@
           <label for="passwordConfirm">Confirm Your Password</label>
           <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm" aria-describedby="helpId" placeholder="">
         </div>
-        <input type="submit" value="Sign Up">
+        <div class="center">
+            <input type="submit" value="Sign Up">
+        </div>
     </form>
-    <p id="errorMessage">
+    <div class="center">
+        <p id="errorMessage">
+    </div>
     <a href="signin.php"><p>Already registered? Sign in here</p></a>
     <script>
         function signUp() {
