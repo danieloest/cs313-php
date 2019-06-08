@@ -1,4 +1,4 @@
-<? session_start(); ?>
+<?php session_start(); ?>
 <div class="jumbotron">
         <h1 class="title">The Worst</h1>
         <div class="menu-flex">
