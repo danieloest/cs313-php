@@ -18,14 +18,31 @@
                                 </ul>
                         </li>
                         <!-- Admin control -->
-                        <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Options
-                                <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                        <li><a href="addProduct.php">Add Product</a></li>
-                                        <li><a href="edit.php">Edit Product</a></li>
-                                </ul>
-                        </li>
+                        <?php
+                        // Only show if the user is authorized
+                        if (isset($_SESSION["username"]) && $_SESSION["username"] != "")
+                        {
+                                $statement = $db->prepare('SELECT isadmin FROM usersteam WHERE username=:username;');
+                                $statement->bindValue(':username', $username);
+                                $statement->execute();
+                                $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($rows as $row) {
+                                        if ($row['isadmin'])
+                                        {
+                                                echo '<li class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Options
+                                                        <span class="caret"></span></a>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a href="addProduct.php">Add Product</a></li>
+                                                                <li><a href="edit.php">Edit Product</a></li>
+                                                        </ul>
+                                                </li>';
+
+                                        }   
+                                }
+
+                        }
+                        ?>
                         <?php
                         // Only show if a user is logged in
                         if (isset($_SESSION["username"]) && $_SESSION["username"] != "")
