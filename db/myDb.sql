@@ -65,12 +65,20 @@ CREATE TABLE purchasedItems(
     productID        int    references product(productID)
 );
 
+CREATE TABLE worstUsers (
+    userID      SERIAL,
+    username    varchar(80),
+    pass        text,
+    isadmin     BOOLEAN
+);
+
+
 
 
 
 
 -- DROP TABLE colors;
-DROP TABLE product;
+-- DROP TABLE product;
 -- DROP TABLE size;
 -- DROP TABLE clothingSection;
 -- DROP TABLE clothing;
