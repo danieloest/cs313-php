@@ -28,7 +28,7 @@
     </div>
     </form>
     <div class="center">
-        <p id="messageBox"></p>
+        <p id="errorMessage"></p>
         <a href="signup.php"><p>Not a member? Sign up here</p></a>
     </div>
     <script>
@@ -47,8 +47,8 @@
                 }
                 else
                 {
-
-                    document.getElementById('messageBox').innerHTML = response;
+                    
+                    document.getElementById('errorMessage').innerHTML = response;
                 }
                 console.log("\nParsed: " + response);
             }
