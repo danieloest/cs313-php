@@ -23,10 +23,14 @@
         <label for="password">Password</label>
         <input type="password"  class="form-control" name="password" id="password">
     </div>
-    <button onclick="login()"  class="btn btn-primary">Sign in</button>
+    <div class="center">
+        <button onclick="login()"  class="btn btn-primary">Sign in</button>
+    </div>
     </form>
-    <p id="messageBox"></p>
-    <a href="signup.php"><p>Not a member? Sign up here</p></a>
+    <div class="center">
+        <p id="messageBox"></p>
+        <a href="signup.php"><p>Not a member? Sign up here</p></a>
+    </div>
     <script>
     function login() {
         var username = document.getElementById('username').value;

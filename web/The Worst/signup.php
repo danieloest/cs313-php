@@ -34,8 +34,8 @@
     </form>
     <div class="center">
         <p id="errorMessage">
+        <a href="signin.php"><p>Already registered? Sign in here</p></a>
     </div>
-    <a href="signin.php"><p>Already registered? Sign in here</p></a>
     <script>
         function signUp() {
             var username = document.getElementById("username").value;
