@@ -23,7 +23,7 @@
                         if (isset($_SESSION["username"]) && $_SESSION["username"] != "")
                         {
                                 echo "In the if statement!";
-                                $statement = $db->prepare('SELECT isadmin FROM usersteam WHERE username=:username;');
+                                $statement = $db->prepare('SELECT isadmin FROM worstusers WHERE username=:username;');
                                 $statement->bindValue(':username', $_SESSION["username"]);
                                 $statement->execute();
                                 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
