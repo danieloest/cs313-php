@@ -10,16 +10,17 @@ $statement->bindValue(':username', $username);
 $statement->execute();
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 header('Content-Type: application/json');
+$data = "Incorrect username/password";
 foreach ($rows as $row) {
     if (password_verify($pass, $row['pass']))
     {
         $_SESSION["username"] = $username;
         $data = "Success";
     }
-    else
-    {
-        $data = "Incorrect username/password";
-    }   
+    // else
+    // {
+    //     $data = "Incorrect username/password";
+    // }   
 }
 echo json_encode($data);
 
