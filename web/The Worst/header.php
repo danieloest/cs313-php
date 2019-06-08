@@ -27,6 +27,7 @@
                                 $statement->execute();
                                 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($rows as $row) {
+                                        echo "row['isadmin'] = " . $row['isadmin'] . "<br>";
                                         if ($row['isadmin'])
                                         {
                                                 echo '<li class="dropdown">
