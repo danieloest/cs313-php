@@ -14,11 +14,15 @@
     <?php include 'connect.php';?>
     <?php include 'header.php';?>
     <form action="#" method="" onsubmit="return false">
+    <div class="form-group">
     <label for="username">User Name</label>
     <input type="text" name="username" id="username">
+    </div>
     <br>
+    <div class="form-group">
     <label for="password">Password</label>
     <input type="password" name="password" id="password">
+    </div>
     <button onclick="login()">Sign in</button>
     </form>
     <p id="messageBox"></p>
