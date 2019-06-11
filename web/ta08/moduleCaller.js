@@ -3,11 +3,11 @@ var reader = require('./module.js');
 let path = process.argv[2];
 let extension = process.argv[3];
 
-console.log(reader(path, extension, display));
+reader(path, extension, display);
 
 function display(error, data)
 {
-    if (error != null)
+    if (error)
         console.log(error);
     else
     {
