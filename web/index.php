@@ -16,8 +16,8 @@
   <div class="container">
     <ul class="list-group">
       <a class="list-group-item" href="hello.html">Assignment 01</a>
-      <a class="list-group-item" href="assign02.php">Assignment 02</a>
-      <a class="list-group-item" href="assign03.php">Assignment 03</a>
+      <a class="list-group-item" href="index.php">Assignment 02</a>
+      <a class="list-group-item" href="prove03/browse.php">Assignment 03</a>
       <a class="list-group-item" href="assign04.php">Assignment 04</a>
       <a class="list-group-item" href="assign05.php">Assignment 05</a>
       <a class="list-group-item" href="assign06.php">Assignment 06</a>
