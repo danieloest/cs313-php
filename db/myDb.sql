@@ -59,6 +59,18 @@ CREATE TABLE purchase (
     shippingZip     int    
 );
 
+CREATE TABLE authors(
+    authorID SERIAL primary key,
+    name     VARCHAR(80)
+);
+
+INSERT INTO authors (name) VALUES ('Mark Twain');
+CREATE TABLE books(
+    bookID SERIAL primary key,
+    title  varchar(80),
+    author int foreign key references authors(authorID)
+);
+
 CREATE TABLE purchasedItems(
     purchasedItemsID serial    primary key,
     purchaseID       int    references purchase(purchaseID),
