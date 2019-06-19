@@ -18,10 +18,10 @@
       <a class="list-group-item" href="hello.html">Assignment 01</a>
       <a class="list-group-item" href="index.php">Assignment 02</a>
       <a class="list-group-item" href="prove03/browse.php">Assignment 03</a>
-      <a class="list-group-item" href="assign04.php">Assignment 04</a>
-      <a class="list-group-item" href="assign05.php">Assignment 05</a>
-      <a class="list-group-item" href="assign06.php">Assignment 06</a>
-      <a class="list-group-item" href="assign07.php">Assignment 07</a>
+      <a class="list-group-item" href="The%20Worst/home.php">Assignment 04</a>
+      <a class="list-group-item" href="The%20Worst/section.php?section=1">Assignment 05</a>
+      <a class="list-group-item" href="The%20Worst/login.php">Assignment 06</a>
+      <a class="list-group-item" href="The%20Worst/signup.php">Assignment 07</a>
       <a class="list-group-item" href="assign08.php">Assignment 08</a>
       <a class="list-group-item" href="assign09.php">Assignment 09</a>
       <a class="list-group-item" href="assign10.php">Assignment 10</a>
