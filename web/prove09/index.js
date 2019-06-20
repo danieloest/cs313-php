@@ -11,8 +11,7 @@ express()
     let weight = parseInt(req.query.weight);
     let mailType = req.query.mailType;
     let cost = calculateCost(weight, mailType);
-    // res.render('pages/results.ejs', {weight: weight, mailType: mailType, cost: cost});
-    res.render('../views/pages/results.ejs', {weight: weight, mailType: mailType, cost: cost});
+    res.render('pages/results.ejs', {weight: weight, mailType: mailType, cost: cost});
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
