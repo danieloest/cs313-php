@@ -6,7 +6,7 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('calculate.html'))
+  .get('/', (req, res) => res.render('public/calculate.html'))
   .get('/calculate', (req, res) => {
     let weight = parseInt(req.query.weight);
     let mailType = req.query.mailType;
