@@ -20,7 +20,6 @@ express()
     {
       switch (true) {
         case (weight <= 1):
-          console.log("Here");
           return .55;
           break;
         case (weight <= 2):
