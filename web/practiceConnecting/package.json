@@ -1,0 +1,18 @@
+{
+  "name": "practiceconnecting",
+  "version": "1.0.0",
+  "description": "Practicing connecting to the heroku database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+//DATABASE_URL='postgres://klxbktpjhcbjof:029fbe018a1261fd389b5374bc0a3c6d1f5d076eeaca21268261cd21abd5899a@ec2-54-243-208-234.compute-1.amazonaws.com:5432/dfhclv59av6q99'
