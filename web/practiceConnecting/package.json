@@ -12,7 +12,9 @@
     "url": ""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "pg": "^7.11.0"
+  }
 }
-
-//DATABASE_URL='postgres://klxbktpjhcbjof:029fbe018a1261fd389b5374bc0a3c6d1f5d076eeaca21268261cd21abd5899a@ec2-54-243-208-234.compute-1.amazonaws.com:5432/dfhclv59av6q99'

@@ -25,6 +25,7 @@ pool.query(sql, function(err, result) {
 });     
 
 express()
+.get('/', (req, res) => res.sendFile(__dirname + '/person.html'))
 .get('/getPerson', (req, res) => {
     console.log("In get person :)");
     let id = parseInt(req.query.id);

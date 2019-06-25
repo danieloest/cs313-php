@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="person">ID: </label>
+    <input type="number" name="person" id="person">
+    <button onclick="getPerson()">Get Person</button>
+    <div id="response"></div>
+    <script>
+        function getPerson() {
+            let id = document.getElementById("person").value;
+            alert("Getting person with the id " + id);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // console.log(this.responseText);
+                renderResponse(this.responseText);
+                }
+            };
+            xhttp.open("GET", "/getPerson?id=" + id, true);
+            xhttp.send();
+        }
+
+        function renderResponse(response) {
+            let data = JSON.parse(response);
+            let responseHolder = document.getElementById("response");
+            console.log(data);
+            console.log(data.fname);
+            // Add First Name
+            let fname = document.createElement("p");
+            fname.id = "fname";
+            fname.innerHTML = data.fname;
+            responseHolder.appendChild(fname);
+            // Add Last name
+            let lname = document.createElement("p");
+            lname.id = "lname";
+            lname.innerHTML = data.lname;
+            responseHolder.appendChild(lname);
+            // Add Birthday
+            let dob = document.createElement("p");
+            dob.id = "dob";
+            dob.innerHTML = data.dob;
+            responseHolder.appendChild(dob);
+
+        }
+    </script>
+</body>
+</html>
