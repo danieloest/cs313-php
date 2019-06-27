@@ -14,11 +14,9 @@
     <script>
         function getPerson() {
             let id = document.getElementById("person").value;
-            alert("Getting person with the id " + id);
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                // console.log(this.responseText);
                 renderResponse(this.responseText);
                 }
             };
@@ -29,8 +27,8 @@
         function renderResponse(response) {
             let data = JSON.parse(response);
             let responseHolder = document.getElementById("response");
-            console.log(data);
-            console.log(data.fname);
+            // Clear the holder
+            responseHolder.innerHTML = '';
             // Add First Name
             let fname = document.createElement("p");
             fname.id = "fname";
